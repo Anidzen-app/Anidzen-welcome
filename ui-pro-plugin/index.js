@@ -5,7 +5,7 @@ const UI_PRO_DIR = resolve('node_modules', '@nuxt', 'ui-pro');
 
 const INDEX_SOURCE_PATH = resolve(
     'ui-pro-plugin',
-    'dist',
+    'pro',
     'shared',
     'ui-pro.BVl-N_q5.cjs',
 );
