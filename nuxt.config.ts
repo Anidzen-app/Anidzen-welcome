@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   pwa: {
     manifest: {
       name: 'Anidzen',
-      short_nam: 'Anidzen',
+      short_name: 'Anidzen',
       description: 'anidzen -- best app for anime'
     }
   }
