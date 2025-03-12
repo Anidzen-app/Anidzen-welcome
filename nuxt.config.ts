@@ -12,11 +12,21 @@ export default defineNuxtConfig({
     '/': { prerender: true }
   },
 
+  devServer: { host: process.env.TAURI_DEV_HOST || 'localhost' },
+
   future: {
     compatibilityVersion: 4
   },
 
   compatibilityDate: '2025-01-15',
+
+  vite: {
+    clearScreen: false,
+    envPrefix: ['VITE_', 'TAURI_'],
+    server: {
+      strictPort: true
+    }
+  },
 
   eslint: {
     config: {
