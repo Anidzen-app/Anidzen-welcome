@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    the anidzen application tempalte
-  </div>
+  <NuxtLayout>
+    <NuxtPage/>
+  </NuxtLayout>
 </template>

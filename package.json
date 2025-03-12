@@ -9,6 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck",
+    "format": "npx prettier . --write",
     "lint": "eslint .",
     "rewrite": "node ui-pro-plugin/index.js"
   },
@@ -28,6 +29,5 @@
   },
   "resolutions": {
     "vue-tsc": "2.2.2"
-  },
-  "packageManager": "pnpm@10.6.2"
+  }
 }
