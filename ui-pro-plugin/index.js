@@ -17,7 +17,6 @@ const INDEX_DEST_PATH = join(
   "ui-pro.BVl-N_q5.cjs",
 );
 
-
 const LICENSE_SOURCE_PATH = resolve(
   "ui-pro-plugin",
   "pro",
