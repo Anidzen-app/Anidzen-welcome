@@ -13,9 +13,14 @@
     "lint": "eslint .",
     "lint-fix": "eslint --fix .",
     "rewrite": "node ui-pro-plugin/index.js",
-    "generate-pwa-assets": "pwa-assets-generator"
+    "generate-pwa-assets": "pwa-assets-generator",
+    "add-android": "npx cap add android",
+    "open-android": "npx cap open android"
   },
   "dependencies": {
+    "@capacitor/android": "^7.1.0",
+    "@capacitor/cli": "^7.1.0",
+    "@capacitor/core": "^7.1.0",
     "@iconify-json/lucide": "^1.2.29",
     "@iconify-json/simple-icons": "^1.2.28",
     "@nuxt/image": "^1.9.0",
