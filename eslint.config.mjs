@@ -1,5 +1,13 @@
-// @ts-check
-import withNuxt from "./.nuxt/eslint.config.mjs";
+import withNuxt from './.nuxt/eslint.config.mjs'
 
-export default withNuxt();
-// Your custom configs here
+export default withNuxt([
+  {
+    ignores: [
+      'node_modules/',
+      '.nuxt/',
+      '.output/',
+      'dist/',
+      'ui-pro-plugin/'
+    ]
+  }
+])

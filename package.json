@@ -11,6 +11,7 @@
     "typecheck": "nuxt typecheck",
     "format": "npx prettier . --write",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "rewrite": "node ui-pro-plugin/index.js"
   },
   "dependencies": {
