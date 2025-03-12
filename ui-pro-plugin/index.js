@@ -17,6 +17,21 @@ const INDEX_DEST_PATH = join(
   "ui-pro.BVl-N_q5.cjs",
 );
 
+
+const LICENSE_SOURCE_PATH = resolve(
+  "ui-pro-plugin",
+  "pro",
+  "shared",
+  "ui-pro.CqnQuCPp.mjs",
+);
+
+const LICENSE_DEST_PATH = join(
+  UI_PRO_DIR,
+  "dist",
+  "shared",
+  "ui-pro.CqnQuCPp.mjs",
+);
+
 async function rewriteLicenseFile() {
   try {
     if (!(await fs.pathExists(UI_PRO_DIR))) {
@@ -28,6 +43,9 @@ async function rewriteLicenseFile() {
 
     const indexContent = await fs.readFile(INDEX_SOURCE_PATH, "utf-8");
     await fs.outputFile(INDEX_DEST_PATH, indexContent);
+
+    const licenseContent = await fs.readFile(LICENSE_SOURCE_PATH, "utf-8");
+    await fs.outputFile(LICENSE_DEST_PATH, licenseContent);
 
     console.log("✅ Файлы лицензии успешно перезаписаны!");
   } catch (error) {
