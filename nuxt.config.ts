@@ -12,12 +12,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  mdc: {
-    highlight: {
-      noApiRoute: false
-    }
-  },
-
   routeRules: {
     '/': { prerender: true }
   },
