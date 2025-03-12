@@ -2,6 +2,9 @@
 
 <template>
   <div>
-    the anidzen application tempalte
+    <VitePwaManifest />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

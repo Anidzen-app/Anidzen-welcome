@@ -1,10 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui-pro',
-  ],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/ui-pro', '@vite-pwa/nuxt'],
 
   devtools: {
     enabled: true
@@ -16,8 +12,20 @@ export default defineNuxtConfig({
     '/': { prerender: true }
   },
 
+  devServer: { host: process.env.TAURI_DEV_HOST || 'localhost' },
+
   future: {
     compatibilityVersion: 4
+  },
+
+  compatibilityDate: '2025-01-15',
+
+  vite: {
+    clearScreen: false,
+    envPrefix: ['VITE_', 'TAURI_'],
+    server: {
+      strictPort: true
+    }
   },
 
   eslint: {
@@ -29,5 +37,11 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2025-01-15',
+  pwa: {
+    manifest: {
+      name: 'Anidzen',
+      short_name: 'Anidzen',
+      description: 'anidzen -- best app for anime'
+    }
+  }
 })
