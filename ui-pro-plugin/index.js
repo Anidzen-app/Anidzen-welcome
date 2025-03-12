@@ -4,20 +4,13 @@ import { resolve, join } from 'path';
 const UI_PRO_DIR = resolve('node_modules', '@nuxt', 'ui-pro');
 
 const INDEX_SOURCE_PATH = resolve(
-    'nuxt-ui-plugin',
-    'modules',
-    'pro',
-    'index.ts',
-);
-const LICENSE_SOURCE_PATH = resolve(
-    'nuxt-ui-plugin',
-    'modules',
-    'pro',
-    'license.ts',
+    'ui-pro-plugin',
+    'dist',
+    'shared',
+    'ui-pro.BVl-N_q5.cjs',
 );
 
-const INDEX_DEST_PATH = join(UI_PRO_DIR, 'modules', 'pro', 'index.ts');
-const LICENSE_DEST_PATH = join(UI_PRO_DIR, 'modules', 'pro', 'license.ts');
+const INDEX_DEST_PATH = join(UI_PRO_DIR, 'dist', 'shared', 'ui-pro.BVl-N_q5.cjs');
 
 async function rewriteLicenseFile() {
     try {
@@ -27,14 +20,9 @@ async function rewriteLicenseFile() {
         }
 
         console.log(`Найден ui-pro. Перезаписываю файлы...`);
-        console.log(`Исходный файл: ${LICENSE_SOURCE_PATH}`);
-        console.log(`Целевой файл: ${LICENSE_DEST_PATH}`);
 
         const indexContent = await fs.readFile(INDEX_SOURCE_PATH, 'utf-8');
         await fs.outputFile(INDEX_DEST_PATH, indexContent);
-
-        const licenseContent = await fs.readFile(LICENSE_SOURCE_PATH, 'utf-8');
-        await fs.outputFile(LICENSE_DEST_PATH, licenseContent);
 
         console.log('✅ Файлы лицензии успешно перезаписаны!');
     } catch (error) {
