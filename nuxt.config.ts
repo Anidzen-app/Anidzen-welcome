@@ -27,27 +27,4 @@ export default defineNuxtConfig({
     }
   },
 
-  pwa: {
-    mode: 'development',
-    strategies: 'generateSW',
-    registerType: 'autoUpdate',
-    manifest: {
-      name: 'Nuxt Vite PWA',
-      short_name: 'NuxtVitePWA',
-      theme_color: '#ffffff'
-    },
-    pwaAssets: {
-      config: true
-    },
-    workbox: {},
-    client: {
-      installPrompt: true
-    },
-    devOptions: {
-      enabled: true,
-      suppressWarnings: true,
-      navigateFallback: '/',
-      navigateFallbackAllowlist: [/^\/$/]
-    }
-  }
 })

@@ -11,8 +11,9 @@
     "typecheck": "nuxt typecheck",
     "format": "npx prettier . --write",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "rewrite": "node ui-pro-plugin/index.js"
+    "lint-fix": "eslint --fix .",
+    "rewrite": "node ui-pro-plugin/index.js",
+    "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.29",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.2.0",
+    "@vite-pwa/assets-generator": "^0.2.6",
     "@vite-pwa/nuxt": "^0.10.6",
     "eslint": "^9.22.0",
     "typescript": "^5.8.2",
