@@ -16,6 +16,7 @@
     "generate-pwa-assets": "pwa-assets-generator",
     "add-android": "npx cap add android",
     "open-android": "npx cap open android",
+    "build-android": "npx cap build android",
     "tauri": "tauri",
     "tauri-build": "npm run tauri build"
   },
@@ -28,11 +29,12 @@
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "3.0.0-beta.4",
     "nuxt": "^3.16.0",
-    "nuxt-ui-pro-plugin": "file:ui-pro-plugin"
+    "nuxt-ui-pro-plugin": "file:ui-pro-plugin",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2",
     "@nuxt/eslint": "^1.2.0",
+    "@tauri-apps/cli": "^2",
     "@vite-pwa/assets-generator": "^0.2.6",
     "@vite-pwa/nuxt": "^0.10.6",
     "eslint": "^9.22.0",

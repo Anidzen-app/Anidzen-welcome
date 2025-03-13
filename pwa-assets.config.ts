@@ -5,5 +5,5 @@ import {
 
 export default defineConfig({
   preset,
-  images: ['public/anidzen-light.svg']
+  images: ['sitemap.xml/anidzen-light.svg']
 })
