@@ -2,14 +2,12 @@
 </script>
 
 <template>
-  <div>
+  <UApp>
     <VitePwaManifest title="Anidzen" />
-	  <main>
-		  <NuxtLayout>
-			  <UApp>
-				  <NuxtPage />
-			  </UApp>
-		  </NuxtLayout>
-	  </main>
-  </div>
+    <UMain>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </UMain>
+  </UApp>
 </template>

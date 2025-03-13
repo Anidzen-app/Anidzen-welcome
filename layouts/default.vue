@@ -2,6 +2,7 @@
 
 <template>
   <div>
+    <UiLocaleSelect />
     <slot />
   </div>
 </template>
