@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+useLayoutEffect(() => {
+	'auth',
+}, []);
 </script>
 
 <template>
