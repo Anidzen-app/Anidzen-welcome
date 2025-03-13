@@ -57,6 +57,7 @@ type Schema = z.output<typeof schema>
 
 function onSubmit(payload: FormSubmitEvent<Schema>) {
   console.log('Регистрация отправлена', payload)
+  navigateTo('/otp/verify')
 }
 </script>
 
@@ -78,10 +79,13 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
         @submit="onSubmit"
       >
         <template #footer>
-			<p class="text-sm mb-2">
-				Уже есть аккаунт?
-				<ULink to="/auth/sign-in" class="text-(--ui-primary) font-medium">Войдите</ULink>.
-			</p>
+          <p class="text-sm mb-2">
+            Уже есть аккаунт?
+            <ULink
+              to="/auth/sign-in"
+              class="text-(--ui-primary) font-medium"
+            >Войдите</ULink>.
+          </p>
           Регистрируясь, вы соглашаетесь с нашими
           <ULink
             to="#"
