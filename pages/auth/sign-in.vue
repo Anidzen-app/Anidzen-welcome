@@ -11,7 +11,7 @@ definePageMeta({
       class="sign-in"
     >
       <div>
-        <UiAuthSignInAuthForm />
+        <UiAuthSignInForm />
       </div>
     </section>
   </div>
