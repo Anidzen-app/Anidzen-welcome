@@ -78,6 +78,10 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
         @submit="onSubmit"
       >
         <template #footer>
+			<p class="text-sm mb-2">
+				Уже есть аккаунт?
+				<ULink to="/auth/sign-in" class="text-(--ui-primary) font-medium">Войдите</ULink>.
+			</p>
           Регистрируясь, вы соглашаетесь с нашими
           <ULink
             to="#"

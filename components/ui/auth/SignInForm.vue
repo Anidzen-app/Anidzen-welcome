@@ -68,7 +68,12 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
             class="text-(--ui-primary) font-medium"
           >Забыли пароль?</NuxtLink>
         </template>
+
         <template #footer>
+			<p class="text-sm mb-2">
+				Нет аккаунта?
+				<ULink to="/auth/sign-up" class="text-(--ui-primary) font-medium">Создайте</ULink>.
+			</p>
           Входя в систему, вы соглашаетесь с нашими <ULink
             to="#"
             class="text-(--ui-primary) font-medium"
