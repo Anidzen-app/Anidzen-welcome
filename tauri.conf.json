@@ -1,8 +1,35 @@
 {
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "anidzen",
+  "version": "0.1.0",
+  "identifier": "com.anidzen.app",
   "build": {
-    "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run generate",
     "devUrl": "http://localhost:3000",
-    "frontendDist": "../dist"
-  }
+    "frontendDist": "./dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "tauri-app",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "tauri-src/icons/32x32.png",
+      "tauri-src/icons/128x128.png",
+      "tauri-src/icons/128x128@2x.png",
+      "tauri-src/icons/icon.icns",
+      "tauri-src/icons/icon.ico"
+    ]
+  },
 }
