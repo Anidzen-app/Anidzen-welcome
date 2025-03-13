@@ -25,11 +25,11 @@
     "active": true,
     "targets": "all",
     "icon": [
-      "tauri-src/icons/32x32.png",
-      "tauri-src/icons/128x128.png",
-      "tauri-src/icons/128x128@2x.png",
-      "tauri-src/icons/icon.icns",
-      "tauri-src/icons/icon.ico"
+      "tauri/icons/32x32.png",
+      "tauri/icons/128x128.png",
+      "tauri/icons/128x128@2x.png",
+      "tauri/icons/icon.icns",
+      "tauri/icons/icon.ico"
     ]
   },
 }
