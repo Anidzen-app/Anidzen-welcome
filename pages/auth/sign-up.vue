@@ -3,7 +3,11 @@
 </script>
 
 <template>
-  <div>
-    <div>wdwd</div>
-  </div>
+	<div>
+
+	</div>
 </template>
+
+<style scoped>
+
+</style>
