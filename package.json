@@ -16,6 +16,7 @@
     "generate-pwa-assets": "pwa-assets-generator",
     "add-android": "npx cap add android",
     "open-android": "npx cap open android",
+    "build-android": "npx cap build android",
     "tauri": "tauri",
     "tauri-build": "npm run tauri build"
   },

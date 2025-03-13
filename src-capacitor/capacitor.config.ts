@@ -1,9 +1,9 @@
 import type { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
-  appName: 'anidzen',
   appId: 'com.anidzen.app',
-  webDir: './dist',
+  appName: 'anidzen',
+  webDir: '../.output/sitemap.xml',
   plugins: {
     SplashScreen: {
       launchShowDuration: 2000,
