@@ -1,21 +1,17 @@
 <script setup lang="ts">
-useLayoutEffect(() => {
-	'auth',
-}, []);
+definePageMeta({
+  layout: 'auth'
+})
 </script>
 
 <template>
   <div>
-    <UiAuthAnimeMarquee />
     <section
       id="sign-in"
-      class="sign-in w-full md:flex"
+      class="sign-in"
     >
-      <div class="w-1/2">
-        wdwd
-      </div>
-      <div class="w-1/2">
-        wdwd
+      <div>
+        <UiAuthSignInAuthForm />
       </div>
     </section>
   </div>
