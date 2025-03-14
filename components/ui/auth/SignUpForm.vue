@@ -94,7 +94,10 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
           и <ULink
             to="/docs/privacy-policy"
             class="text-(--ui-primary) font-medium"
-          >Политикой конфиденциальности</ULink>.
+          >Политикой конфиденциальности</ULink>. и <ULink
+            to="/docs/for-copyright-holders"
+            class="text-(--ui-primary) font-medium"
+          >Для правообладателей</ULink>.
         </template>
       </UAuthForm>
     </UPageCard>
