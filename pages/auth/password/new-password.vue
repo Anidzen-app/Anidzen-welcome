@@ -7,11 +7,11 @@ definePageMeta({
 <template>
   <div>
     <section
-      id="auth-password-forgot"
+      id=""
       class="auth-password-forgo"
     >
       <div>
-        <UiAuthForgotPasswordForm />
+        <UiAuthNewPasswordForm />
       </div>
     </section>
   </div>
