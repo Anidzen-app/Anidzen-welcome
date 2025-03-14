@@ -1,29 +1,13 @@
 <script setup lang="ts">
-import * as z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
-
-const schema = z.object({
-  email: z.string().email('Некорректный email'),
-  name: z.string().min(3, 'Никнейм должен содержать минимум 3 символа'),
-  password: z.string().min(8, 'Пароль должен содержать минимум 8 символов'),
-  password_confirmation: z.string()
-}).refine(data => data.password === data.password_confirmation, {
-  message: 'Пароли не совпадают',
-  path: ['password_confirmation']
+const state = reactive({
+  code: ''
 })
-
-type Schema = z.output<typeof schema>
-
-function onSubmit(payload: FormSubmitEvent<Schema>) {
-  console.log('Регистрация отправлена', payload)
-}
 </script>
 
 <template>
   <div class="flex flex-col items-center justify-center gap-4 p-4">
     <UPageCard class="w-full max-w-md">
       <UAuthForm
-        :schema="schema"
         title="Подвердите действие"
         description=""
         icon="i-lucide-mail"
@@ -32,11 +16,27 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
           <div class="mb-12 mt-1 text-base text-pretty text-(--ui-text-muted)">
             Введите код подтверждения, отправленный на вашу почту. ✉️
           </div>
-          <UForm>
-            <UPinInput
+          <UForm
+            class="space-y-5"
+            :state="state"
+          >
+            <UFormField
+              name="code"
+            >
+              <UPinInput
+                size="xl"
+                otp
+              />
+            </UFormField>
+
+            <UButton
+              type="submit"
+              block
               size="xl"
-              otp
-            />
+              to="/"
+            >
+              Отправить
+            </UButton>
           </UForm>
         </template>
         <template #footer>

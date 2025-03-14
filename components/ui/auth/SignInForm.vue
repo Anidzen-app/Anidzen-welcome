@@ -64,7 +64,7 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
       >
         <template #password-hint>
           <NuxtLink
-            to="/"
+            to="/auth/password/forgot"
             class="text-(--ui-primary) font-medium"
           >Забыли пароль?</NuxtLink>
         </template>
