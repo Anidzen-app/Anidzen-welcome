@@ -5,7 +5,7 @@
 <template>
   <div>
     <UContainer>
-      <UCard class="mt-10">
+      <UCard class="my-10">
         <slot />
       </UCard>
     </UContainer>
