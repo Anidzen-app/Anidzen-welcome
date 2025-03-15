@@ -78,7 +78,7 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
             >Создайте</ULink>.
           </p>
           Входя в систему, вы соглашаетесь с нашими <ULink
-            to="#"
+            to="/docs/terms-of-use"
             class="text-(--ui-primary) font-medium"
           >Условиями использования</ULink>.
         </template>
