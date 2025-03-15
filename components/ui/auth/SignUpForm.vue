@@ -88,13 +88,16 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
           </p>
           Регистрируясь, вы соглашаетесь с нашими
           <ULink
-            to="#"
+            to="/docs/terms-of-use"
             class="text-(--ui-primary) font-medium"
           >Условиями использования</ULink>
           и <ULink
-            to="#"
+            to="/docs/privacy-policy"
             class="text-(--ui-primary) font-medium"
-          >Политикой конфиденциальности</ULink>.
+          >Политикой конфиденциальности</ULink>. и <ULink
+            to="/docs/for-copyright-holders"
+            class="text-(--ui-primary) font-medium"
+          >Для правообладателей</ULink>.
         </template>
       </UAuthForm>
     </UPageCard>
