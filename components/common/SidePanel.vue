@@ -2,7 +2,7 @@
 const open = ref(false)
 
 const links = [[{
-  label: 'Home',
+  label: 'Главная',
   icon: 'i-lucide-house',
   to: '/',
   onSelect: () => {
@@ -35,16 +35,26 @@ const links = [[{
     class="bg-(--ui-bg-elevated)/25"
     :ui="{ root: 'min-w-[73px]', footer: 'lg:border-t lg:border-(--ui-border) justify-center' }"
   >
-    <template #header>
-      <div class="py-4">
-        <NuxtImg src="/anidzen-light.svg" />
+    <template #header="{ collapsed }">
+      <div class="py-4 flex items-center justify-between gap-2">
+        <UColorModeImage
+          light="/anidzen-light.svg"
+          dark="/anidzen-dark.svg"
+          :width="50"
+          :height="50"
+        />
+        <h2
+          v-if="!collapsed"
+          class="text-3xl font-bold"
+        >
+          <span class="text-(--ui-primary)">Ani</span>dzen
+        </h2>
       </div>
     </template>
 
     <template #default="{ collapsed }">
       <div class="min-w-[40px]">
         <UNavigationMenu
-          size="xl"
           :collapsed="collapsed"
           :items="links[0]"
           orientation="vertical"

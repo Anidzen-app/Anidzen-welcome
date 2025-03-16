@@ -8,12 +8,10 @@
       class="header py-2 px-4 bg-(--ui-bg)/75 backdrop-blur border-b border-(--ui-border) h-(--ui-header-height) sticky top-0 z-50 flex items-center justify-between "
     >
       <div class="left">
-        <UDashboardSidebarCollapse />
+        <UDashboardSidebarCollapse variant="subtle" size="xl" />
       </div>
 
-      <div class="center">
-        <CommonAppContentSearch />
-      </div>
+      <div class="center" />
       <div class="right">
         wdwd
       </div>
