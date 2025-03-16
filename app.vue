@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<CommonCookieConsent/>
+  <CommonCookieConsent />
 
   <UApp>
     <VitePwaManifest title="Anidzen" />
