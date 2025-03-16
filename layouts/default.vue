@@ -1,10 +1,13 @@
-<script setup lang="ts"></script>
-
 <template>
   <div>
-    <UiLocaleSelect />
-    <slot />
+    <UDashboardGroup>
+      <CommonSidePanel />
+      <div class="w-full overflow-y-scroll">
+        <CommonAppHeader />
+        <div>
+          <slot />
+        </div>
+      </div>
+    </udashboardgroup>
   </div>
 </template>
-
-<style scoped></style>
