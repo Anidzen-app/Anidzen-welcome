@@ -14,6 +14,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    shikimoriApiBaseUrl: process.env.SHIKIMORI_API_BASE_URL || '/'
+  },
+
   routeRules: {
     '/': { prerender: true }
   },
