@@ -4,31 +4,27 @@ import { useSidebarStore } from '~/stores/sidebar'
 const sidebarStore = useSidebarStore()
 const open = ref(false)
 
-const links = [[{
-  label: 'Главная',
-  icon: 'i-lucide-house',
-  to: '/',
-  onSelect: () => {
-    open.value = false
-  }
-}, {
-  label: 'Customers',
-  icon: 'i-lucide-users',
-  to: '/auth/sign-in',
-  onSelect: () => {
-    open.value = false
-  }
-}], [{
-  label: 'Feedback',
-  icon: 'i-lucide-message-circle',
-  to: 'https://github.com/nuxt-ui-pro/dashboard',
-  target: '_blank'
-}, {
-  label: 'Help & Support',
-  icon: 'i-lucide-info',
-  to: 'https://github.com/nuxt/ui-pro',
-  target: '_blank'
-}]]
+const links = [
+  [
+    {
+      label: 'Главная',
+      icon: 'i-lucide-house',
+      to: '/',
+      onSelect: () => {
+        open.value = false
+      }
+    }
+  ], [{
+    label: 'Feedback',
+    icon: 'i-lucide-message-circle',
+    to: 'https://github.com/nuxt-ui-pro/dashboard',
+    target: '_blank'
+  }, {
+    label: 'Help & Support',
+    icon: 'i-lucide-info',
+    to: 'https://github.com/nuxt/ui-pro',
+    target: '_blank'
+  }]]
 </script>
 
 <template>
@@ -64,6 +60,15 @@ const links = [[{
           orientation="vertical"
           :ui="{ linkLeadingIcon: 'size-7', linkTrailingBadgeSize: 'xl' }"
         />
+      </div>
+    </template>
+
+    <template #footer="{ collapsed }">
+      <div class="min-w-[40px]">
+        <span
+          v-if="!collapsed"
+          class="text-xs text-left opacity-50"
+        >v. 1.0.0-alpaha.1</span>
       </div>
     </template>
   </UDashboardSidebar>

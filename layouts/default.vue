@@ -4,8 +4,10 @@
       <CommonSidePanel />
       <div class="w-full overflow-y-scroll">
         <CommonAppHeader />
-        <div>
-          <slot />
+        <div class="w-full">
+          <UContainer class="flex justify-between max-w-[var(--container-8xl)] mt-5">
+            <slot />
+          </UContainer>
         </div>
       </div>
     </udashboardgroup>

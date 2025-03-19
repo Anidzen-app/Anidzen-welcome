@@ -8,7 +8,7 @@ const sidebarStore = useSidebarStore()
   <div>
     <header
       id="header"
-      class="header py-2 px-4 bg-(--ui-bg)/75 backdrop-blur border-b border-(--ui-border) h-(--ui-header-height) sticky top-0 z-50"
+      class="header py-3  bg-(--ui-bg)/75 backdrop-blur border-b border-(--ui-border) h-(--ui-header-height) sticky top-0 z-50"
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)]">
         <div class="left">
@@ -24,14 +24,14 @@ const sidebarStore = useSidebarStore()
           <UInput
             icon="i-lucide-search"
             size="xl"
-            placeholder="Search..."
+            placeholder="Что прикажете найти, сенпай?"
             variant="soft"
             class="w-full max-w-[700px]"
           />
         </div>
         <div class="right">
           <UAvatar
-            src="https://github.com/benjamincanac.png"
+            src="https://avatars.githubusercontent.com/u/140258231?s=400&u=fb27d8779ed74ac3d21855706638fcb9311660f0&v=4"
             size="xl"
           />
         </div>
