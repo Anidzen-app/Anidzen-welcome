@@ -1,4 +1,4 @@
-import {defineEventHandler, getHeaders} from 'h3'
+import { defineEventHandler, getHeaders } from 'h3'
 
 export default defineEventHandler(async (event) => {
   try {
@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
       }
     `
 
-  return await apiClient(event, apiUrl, 'POST', {query}, headers)
+    return await apiClient(event, apiUrl, 'POST', { query }, headers)
   } catch (error) {
     console.error('Ошибка при обработке события:', error)
     return handle(error)
