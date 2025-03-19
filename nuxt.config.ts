@@ -1,12 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/ui-pro', '@vite-pwa/nuxt'],
+  modules: [
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxt/ui-pro',
+    '@vite-pwa/nuxt',
+    '@pinia/nuxt',
+    'nuxt-swiper'
+  ],
 
   devtools: {
     enabled: true
   },
 
   css: ['~/assets/css/main.css'],
+
+  runtimeConfig: {
+    shikimoriApiBaseUrl: process.env.SHIKIMORI_API_BASE_URL || '/'
+  },
 
   routeRules: {
     '/': { prerender: true }
