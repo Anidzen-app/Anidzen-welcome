@@ -26,7 +26,11 @@ const animes = data._value.data.animes
               {{ slide.description }}
             </p>
             <div class="flex gap-5 mt-3">
-              <UButton label="Смотреть" size="xl" variant="soft"/>
+              <UButton
+                label="Смотреть"
+                size="xl"
+                variant="soft"
+              />
             </div>
           </div>
         </div>
