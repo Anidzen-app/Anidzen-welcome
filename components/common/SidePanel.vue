@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useSidebarStore } from '~/stores/sidebar'
+
+const sidebarStore = useSidebarStore()
 const open = ref(false)
 
 const links = [[{
@@ -32,6 +35,7 @@ const links = [[{
   <UDashboardSidebar
     v-model:open="open"
     collapsible
+    :collapsed="sidebarStore.collapsible"
     class="bg-(--ui-bg-elevated)/25"
     :ui="{ root: 'min-w-[73px]', footer: 'lg:border-t lg:border-(--ui-border) justify-center' }"
   >
