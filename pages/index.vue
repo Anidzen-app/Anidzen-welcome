@@ -4,6 +4,6 @@
 
 <template>
   <div>
-    <p>its a anime site ANIDZEN!)</p>
+    <IndexMostSlider />
   </div>
 </template>

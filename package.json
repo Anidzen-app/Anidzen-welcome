@@ -40,6 +40,7 @@
     "@vite-pwa/assets-generator": "^0.2.6",
     "@vite-pwa/nuxt": "^0.10.6",
     "eslint": "^9.22.0",
+    "nuxt-swiper": "^2.0.0",
     "typescript": "^5.8.2",
     "vue-tsc": "^2.2.2"
   },

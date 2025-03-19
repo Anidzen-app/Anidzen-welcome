@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui-pro',
     '@vite-pwa/nuxt',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    'nuxt-swiper'
   ],
 
   devtools: {
