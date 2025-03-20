@@ -15,19 +15,19 @@ const sidebarStore = useSidebarStore()
           <UButton
             size="xl"
             icon="i-lucide-menu"
-            class="cursor-pointer"
+            class="hidden lg:flex cursor-pointer"
             variant="subtle"
             @click="sidebarStore.toggle()"
           />
         </div>
         <div class="center flex items-center w-full px-10 justify-center">
-          <!--          <UInput -->
-          <!--            icon="i-lucide-search" -->
-          <!--            size="xl" -->
-          <!--            placeholder="Что прикажете найти, сенпай?" -->
-          <!--            variant="soft" -->
-          <!--            class="w-full max-w-[700px]" -->
-          <!--          /> -->
+                    <UInput
+                      icon="i-lucide-search"
+                      size="xl"
+                      placeholder="Что прикажете найти, сенпай?"
+                      variant="soft"
+                      class="w-full max-w-[700px]"
+                    />
         </div>
         <div class="right">
           <!--          <UAvatar -->
