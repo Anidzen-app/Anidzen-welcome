@@ -1,17 +1,12 @@
 <script setup lang="ts">
-const { data } = await useAsyncData('api-anime-shikimori-top-most', () => $fetch('/api/anime/shikimori/top/most'))
-const animes = ref<never[]>([])
-
-onMounted(async () => {
-  await new Promise(resolve => setTimeout(resolve, 100))
-  animes.value = data.value?.data?.animes
-})
+const { data } = useFetch('/api/anime/shikimori/top/most')
+const animes = data.value?.data?.animes
 </script>
 
 <template>
   <div>
     <div
-      v-if="!animes.length"
+      v-if="!animes"
       class="bg-(--ui-bg-elevated)/25 rounded-lg overflow-hidden"
     >
       <div class="w-full relative flex gap-5">
@@ -44,7 +39,7 @@ onMounted(async () => {
                 class="min-w-[300px] h-[400px]"
               />
             </div>
-            <div class="py-4 pr-5">
+            <div class="py-4">
               <h2 class="text-3xl">
                 {{ slide.russian }}
                 <span class="opacity-50 text-2xl">{{ slide.name }}</span>

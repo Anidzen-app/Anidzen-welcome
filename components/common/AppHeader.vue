@@ -21,19 +21,19 @@ const sidebarStore = useSidebarStore()
           />
         </div>
         <div class="center flex items-center w-full px-10 justify-center">
-          <UInput
-            icon="i-lucide-search"
-            size="xl"
-            placeholder="Что прикажете найти, сенпай?"
-            variant="soft"
-            class="w-full max-w-[700px]"
-          />
+          <!--          <UInput -->
+          <!--            icon="i-lucide-search" -->
+          <!--            size="xl" -->
+          <!--            placeholder="Что прикажете найти, сенпай?" -->
+          <!--            variant="soft" -->
+          <!--            class="w-full max-w-[700px]" -->
+          <!--          /> -->
         </div>
         <div class="right">
-          <UAvatar
-            src="https://avatars.githubusercontent.com/u/140258231?s=400&u=fb27d8779ed74ac3d21855706638fcb9311660f0&v=4"
-            size="xl"
-          />
+          <!--          <UAvatar -->
+          <!--            src="https://avatars.githubusercontent.com/u/140258231?s=400&u=fb27d8779ed74ac3d21855706638fcb9311660f0&v=4" -->
+          <!--            size="xl" -->
+          <!--          /> -->
         </div>
       </UContainer>
     </header>

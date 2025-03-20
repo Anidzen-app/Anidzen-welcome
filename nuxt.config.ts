@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui-pro',
-    '@vite-pwa/nuxt',
+    // '@vite-pwa/nuxt',
     '@pinia/nuxt',
     'nuxt-swiper'
   ],
@@ -46,13 +46,13 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
-  },
-
-  pwa: {
-    manifest: {
-      name: 'Anidzen',
-      short_name: 'Anidzen',
-      description: 'anidzen -- best app for anime'
-    }
   }
+
+  // pwa: {
+  //   manifest: {
+  //     name: 'Anidzen',
+  //     short_name: 'Anidzen',
+  //     description: 'anidzen -- best app for anime'
+  //   }
+  // }
 })

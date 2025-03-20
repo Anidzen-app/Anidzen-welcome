@@ -5,8 +5,8 @@
 <template>
   <CommonCookieConsent />
 
-  <UApp>
-    <VitePwaManifest title="Anidzen" />
+  <UApp :toaster="{ expand: false }">
+    <!--    <VitePwaManifest title="Anidzen" /> -->
     <UMain>
       <NuxtLayout>
         <NuxtPage />
