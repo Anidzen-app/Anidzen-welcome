@@ -3,8 +3,8 @@ const { data } = await useAsyncData('api-anime-shikimori-top-most', () => $fetch
 const animes = ref<never[]>([])
 
 onMounted(async () => {
-	await new Promise(resolve => setTimeout(resolve, 1000));
-	animes.value = data.value?.data?.animes
+  await new Promise(resolve => setTimeout(resolve, 100))
+  animes.value = data.value?.data?.animes
 })
 </script>
 
