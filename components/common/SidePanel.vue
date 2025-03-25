@@ -1,8 +1,11 @@
 <script setup lang="ts">
 import { useSidebarStore } from '~/stores/sidebar'
 
+const config = useRuntimeConfig()
 const sidebarStore = useSidebarStore()
 const open = ref(false)
+
+const appVersion = config.public.appVersion;
 
 const links = [
   [
@@ -67,8 +70,8 @@ const links = [
       <div class="min-w-[40px]">
         <span
           v-if="!collapsed"
-          class="text-xs text-left opacity-50"
-        >v. 1.0.0-alpaha.1</span>
+          class="text-xs text-left"
+        >V. <span class="opacity-50">{{ appVersion }}</span></span>
       </div>
     </template>
   </UDashboardSidebar>

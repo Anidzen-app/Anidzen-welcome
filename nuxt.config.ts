@@ -16,6 +16,9 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   runtimeConfig: {
+	   public: {
+		   appVersion: process.env.APP_VERSION || '1.0.0'
+	   },
     shikimoriApiBaseUrl: process.env.SHIKIMORI_API_BASE_URL || '/'
   },
 
