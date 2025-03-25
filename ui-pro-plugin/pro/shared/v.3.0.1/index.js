@@ -7,30 +7,28 @@ const INDEX_SOURCE_PATH = resolve(
   "ui-pro-plugin",
   "pro",
   "shared",
-	"v.3.0.1",
-  "ui-pro.BZAmqo9Y.cjs",
+  "ui-pro.BVl-N_q5.cjs",
 );
 
 const INDEX_DEST_PATH = join(
   UI_PRO_DIR,
   "dist",
   "shared",
-  "ui-pro.BZAmqo9Y.cjs",
+  "ui-pro.BVl-N_q5.cjs",
 );
 
 const LICENSE_SOURCE_PATH = resolve(
   "ui-pro-plugin",
   "pro",
   "shared",
-	"v.3.0.1",
-  "ui-pro.DXGwPxta.mjs",
+  "ui-pro.CqnQuCPp.mjs",
 );
 
 const LICENSE_DEST_PATH = join(
   UI_PRO_DIR,
   "dist",
   "shared",
-  "ui-pro.DXGwPxta.mjs",
+  "ui-pro.CqnQuCPp.mjs",
 );
 
 async function rewriteLicenseFile() {
