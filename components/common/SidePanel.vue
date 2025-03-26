@@ -5,7 +5,7 @@ const config = useRuntimeConfig()
 const sidebarStore = useSidebarStore()
 const open = ref(false)
 
-const appVersion = config.public.appVersion;
+const appVersion = config.public.appVersion
 
 const links = [
   [

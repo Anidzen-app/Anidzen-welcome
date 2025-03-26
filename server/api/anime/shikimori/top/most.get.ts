@@ -6,8 +6,9 @@ export default defineEventHandler(async (event) => {
     const headers = getHeaders(event)
     const apiUrl = config.shikimoriApiBaseUrl
     const currentYear = new Date().getFullYear()
-
-    console.log(`Отправка запроса на ${apiUrl}`)
+    if (!config.appSsrDebug) {
+      console.log(`Запрос на ${apiUrl}`)
+    }
 
     const query = `
       query {
@@ -24,9 +25,8 @@ export default defineEventHandler(async (event) => {
       }
     `
 
-    return await apiClient(event, apiUrl, 'POST', { query }, headers)
+    return await apiClient(apiUrl, 'POST', { query }, headers)
   } catch (error) {
-    console.error('Ошибка при обработке события:', error)
     return handle(error)
   }
 })

@@ -3,6 +3,7 @@
 </script>
 
 <template>
+  <NuxtLoadingIndicator />
   <CommonCookieConsent />
 
   <UApp :toaster="{ expand: false }">
