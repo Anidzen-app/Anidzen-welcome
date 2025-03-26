@@ -1,5 +1,10 @@
 import { useRuntimeConfig } from '#imports'
 
 export const getConfig = () => {
-  return useRuntimeConfig()
+  const config = useRuntimeConfig()
+
+  return {
+    ...config,
+    appSsrDebug: config.appSsrDebug === 'true'
+  }
 }

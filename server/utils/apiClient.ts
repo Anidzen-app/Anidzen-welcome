@@ -1,7 +1,4 @@
 import type { RequestHeaders } from 'h3'
-import { getBaseHeaders } from './apiHelper'
-import { handle } from './handle'
-import { getConfig } from './getConfig'
 
 type HttpMethod =
   | 'GET'
