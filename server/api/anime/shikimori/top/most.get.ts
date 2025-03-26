@@ -24,7 +24,7 @@ export default defineEventHandler(async (event) => {
       }
     `
 
-    return await apiClient(event, apiUrl, 'POST', { query }, headers)
+    return await apiClient(apiUrl, 'POST', { query }, headers)
   } catch (error) {
     console.error('Ошибка при обработке события:', error)
     return handle(error)

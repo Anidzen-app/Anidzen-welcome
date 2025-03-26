@@ -1,6 +1,7 @@
 import type { RequestHeaders } from 'h3'
 import { getBaseHeaders } from './apiHelper'
 import { handle } from './handle'
+import { getConfig } from './getConfig'
 
 type HttpMethod =
   | 'GET'
@@ -12,19 +13,21 @@ type HttpMethod =
   | 'HEAD'
 
 export const apiClient = async (
-  event: any,
   url: string,
   method?: HttpMethod,
   body: any = null,
   extraHeaders?: RequestHeaders
 ) => {
+  const config = getConfig()
   try {
-    console.log('Запрос отправляется с параметрами:')
-    console.log('URL:', url)
-    console.log('Метод:', method)
+    if (config.appSsrDebug) {
+      console.log('Запрос отправляется с параметрами:')
+      console.log('URL:', url)
+      console.log('Метод:', method)
 
-    console.log('Базовые заголовки:', getBaseHeaders(event))
-    console.log('Дополнительные заголовки:', extraHeaders)
+      console.log('Базовые заголовки:', getBaseHeaders())
+      console.log('Дополнительные заголовки:', extraHeaders)
+    }
 
     const blockedHeaders = [
       'sec-ch-ua',
@@ -38,27 +41,30 @@ export const apiClient = async (
         ([key]) => !blockedHeaders.includes(key)
       )
     )
-
-    console.log('Отфильтрованные заголовки:', filteredExtraHeaders)
+    if (config.appSsrDebug) {
+      console.log('Отфильтрованные заголовки:', filteredExtraHeaders)
+    }
 
     const headers = {
-      ...getBaseHeaders(event),
+      ...getBaseHeaders(),
       ...filteredExtraHeaders
     }
 
-    console.log('Заголовки:', headers)
-    console.log('Тело запроса:', body)
+    if (config.appSsrDebug) {
+      console.log('Заголовки:', headers)
+      console.log('Тело запроса:', body)
+    }
 
     const response = await $fetch(url, {
       method,
       headers,
       body: body ? JSON.stringify(body) : null
     })
-
-    console.log('Ответ от API:', response)
+    if (config.appSsrDebug) {
+      console.log('Ответ от API:', response)
+    }
     return response
   } catch (error) {
-    console.error('Ошибка при выполнении запроса:', error)
     return handle(error)
   }
 }

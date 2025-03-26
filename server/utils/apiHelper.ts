@@ -1,9 +1,12 @@
-export const getBaseHeaders = (event: any) => {
-  const config = useRuntimeConfig(event)
+import { getConfig } from './getConfig'
 
-  console.log('Получение базовых заголовков')
-  console.log('Используем API ключ:', config.apiKey)
+export const getBaseHeaders = () => {
+  const config = getConfig()
 
+  if (config.appSsrDebug) {
+    console.log('Получение базовых заголовков')
+    console.log('Используем API ключ:', config.apiKey)
+  }
   return {
     'X-Api-Key': config.apiKey
   }

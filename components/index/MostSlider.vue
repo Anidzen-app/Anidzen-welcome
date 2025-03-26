@@ -1,17 +1,12 @@
 <script setup lang="ts">
 const { data } = await useAsyncData('api-anime-shikimori-top-most', () => $fetch('/api/anime/shikimori/top/most'))
-const animes = ref<never[]>([])
-
-onMounted(async () => {
-  await new Promise(resolve => setTimeout(resolve, 100))
-  animes.value = data.value?.data?.animes
-})
+const animes = data?.value?.data.animes
 </script>
 
 <template>
   <div>
     <div
-      v-if="!animes.length"
+      v-if="!animes"
       class="bg-(--ui-bg-elevated)/25 rounded-lg overflow-hidden"
     >
       <div class="w-full relative flex gap-5">
@@ -29,9 +24,8 @@ onMounted(async () => {
         </div>
       </div>
     </div>
-
-    <ClientOnly v-else>
-      <swiper-container class="bg-(--ui-bg-elevated)/25 rounded-lg overflow-hidden">
+    <div class="max-h-[400px] overflow-hidden bg-(--ui-bg-elevated)/25 rounded-lg">
+      <swiper-container>
         <swiper-slide
           v-for="(slide, idx) in animes"
           :key="idx"
@@ -63,7 +57,7 @@ onMounted(async () => {
           </div>
         </swiper-slide>
       </swiper-container>
-    </ClientOnly>
+    </div>
   </div>
 </template>
 
