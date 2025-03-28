@@ -8,7 +8,7 @@ const sidebarStore = useSidebarStore()
   <div>
     <header
       id="header"
-      class="header py-3  bg-(--ui-bg)/75 backdrop-blur border-b border-(--ui-border) h-(--ui-header-height) sticky top-0 z-50"
+      class="header py-3 bg-(--ui-bg)/75 backdrop-blur border-b border-(--ui-border) h-(--ui-header-height) sticky top-0 z-50"
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)]">
         <div class="left">
@@ -29,7 +29,7 @@ const sidebarStore = useSidebarStore()
             class="w-full max-w-[700px]"
           />
         </div>
-        <div class="right">
+        <div class="hidden lg:block right">
           <UAvatar
             src="https://avatars.githubusercontent.com/u/140258231?s=400&u=fb27d8779ed74ac3d21855706638fcb9311660f0&v=4"
             size="xl"
