@@ -80,17 +80,19 @@ onMounted(async () => {
             />
           </div>
           <div class="py-4 px-4 md:pr-4 flex flex-col bottom-0 absolute md:relative bg-linear-to-t from-(--ui-bg) from-45% md:bg-transparent md:from-transparent w-full md:w-auto">
-            <h2 class="text-2xl md:text-3xl text-center md:text-left line-clamp-2 md:line-clamp-3">
+            <h2 class="text-2xl md:text-3xl text-center md:text-left line-clamp-2 lg:line-clamp-2">
               {{ slide.russian }}
             </h2>
-            <span class="hidden md:block opacity-50 text-xl">{{ slide.name }}</span>
+			  <div class="hidden md:block">
+				  <span class="opacity-50 text-xl line-clamp-1">{{ slide.name }}</span>
+			  </div>
             <div class="mt-1 md:mt-3 text-center md:text-left opacity-50 text-sm md:opacity-100 md:text-base">
               <span>Оценка: {{ slide.score }}</span> |
               <span>Серии։ {{ slide.episodes }}</span> |
               <span>{{ slide.genres[0].russian }}</span>
             </div>
             <div class="hidden md:block mt-3">
-              <p class="opacity-50 line-clamp-5">
+              <p class="opacity-50  line-clamp-3 lg:line-clamp-5">
                 {{ clearShikimoriDescription(slide.description) }}
               </p>
             </div>
