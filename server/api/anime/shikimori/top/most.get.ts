@@ -12,13 +12,18 @@ export default defineEventHandler(async (event) => {
 
     const query = `
       query {
-        animes(season: "${currentYear}", limit: 5, order: popularity, status: "released", kind: "tv") {
+        animes(season: "${currentYear}", limit: 5, order: popularity, status: "released", kind: "tv,ona") {
           id
           name
           russian
           score
+          episodes
+          status
           poster {
             originalUrl
+          }
+          genres {
+            russian
           }
           description
         }
