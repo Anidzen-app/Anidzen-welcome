@@ -37,9 +37,9 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="max-h-[500px] lg:max-h-[400px] overflow-hidden bg-(--ui-bg-elevated)/25 rounded-lg relative">
+  <div class="max-h-[500px] lg:max-h-[400px] overflow-hidden bg-(--ui-bg-elevated)/25  md:rounded-lg relative">
     <div
-      class="absolute top-0 h-1 bg-primary-400 z-10"
+      class="hidden md:block absolute top-0 h-1 bg-primary-400 z-10"
       :style="{ width: progress + '%' }"
     />
 
@@ -69,15 +69,15 @@ onMounted(async () => {
               class="w-full md:min-w-[300px] object-cover h-[500px] md:h-[400px]"
             />
           </div>
-          <div class="py-4 pr-5 flex flex-col absolute md:relative">
-            <h2 class="text-3xl">
-              {{ slide.russian }}
-            </h2>
-            <span class="opacity-50 text-xl">{{ slide.name }}</span>
-            <p class="opacity-50 mt-3 hidden lg:block">
-              {{ clearShikimoriDescription(slide.description) }}
-            </p>
-            <div class="flex gap-3 mt-3 items-center">
+          <div class="py-4 pr-5 flex flex-col bottom-0 absolute md:relative bg-(--ui-bg) md:bg-transparent w-full md:w-auto">
+            <h2 class="text-2xl md:text-3xl text-center">{{ slide.russian }}</h2>
+            <span class="hidden md:block opacity-50 text-xl">{{ slide.name }}</span>
+        	<div class="hidden md:block mt-3">
+				<p class="opacity-50 line-clamp-5">
+					{{ clearShikimoriDescription(slide.description) }}
+				</p>
+			</div>
+            <div class="flex gap-3 mt-3 items-center justify-center md:justify-start">
               <UButton
                 label="Смотреть"
                 icon="i-lucide-play"

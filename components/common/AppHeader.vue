@@ -8,9 +8,9 @@ const sidebarStore = useSidebarStore()
   <div>
     <header
       id="header"
-      class="header py-3 bg-(--ui-bg)/75 backdrop-blur border-b border-(--ui-border) h-(--ui-header-height) sticky top-0 z-50"
+      class="header py-3 md:bg-(--ui-bg)/75 md:backdrop-blur md:border-b md:border-(--ui-border) h-(--ui-header-height) w-full fixed md:sticky top-0 z-50"
     >
-      <UContainer class="flex justify-between max-w-[var(--container-8xl)]">
+      <UContainer class="flex justify-between max-w-[var(--container-8xl)] px-0">
         <div class="left">
           <UButton
             size="xl"
@@ -20,14 +20,21 @@ const sidebarStore = useSidebarStore()
             @click="sidebarStore.toggle()"
           />
         </div>
-        <div class="center flex items-center w-full px-10 justify-center">
+        <div class="center flex items-center w-full px-4 md:px-10 justify-center">
           <UInput
             icon="i-lucide-search"
             size="xl"
             placeholder="Что прикажете найти, сенпай?"
             variant="soft"
-            class="w-full max-w-[700px]"
+            class="w-full max-w-[700px] hidden md:block"
           />
+			<UInput
+				icon="i-lucide-search"
+				size="xl"
+				placeholder="Что искать, сенпай?"
+				:highlight="false"
+				class="w-full max-w-[700px] block md:hidden"
+			/>
         </div>
         <div class="hidden lg:block right">
           <UAvatar
