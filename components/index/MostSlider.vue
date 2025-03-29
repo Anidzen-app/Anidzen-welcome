@@ -39,7 +39,7 @@ onMounted(async () => {
 <template>
   <div class="max-h-[520px] lg:max-h-[400px] overflow-hidden md:bg-(--ui-bg-elevated)/25  md:rounded-lg relative">
     <div
-      class="absolute top-0 h-0.5 md:h-1 bg-primary-400 z-10"
+      class="hidden md:block absolute top-0 h-0.5 md:h-1 bg-primary-400 z-10"
       :style="{ width: progress + '%' }"
     />
 
