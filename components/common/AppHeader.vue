@@ -28,13 +28,13 @@ const sidebarStore = useSidebarStore()
             variant="soft"
             class="w-full max-w-[700px] hidden md:block"
           />
-			<UInput
-				icon="i-lucide-search"
-				size="xl"
-				placeholder="Что искать, сенпай?"
-				:highlight="false"
-				class="w-full max-w-[700px] block md:hidden"
-			/>
+          <UInput
+            icon="i-lucide-search"
+            size="xl"
+            placeholder="Что искать, сенпай?"
+            :highlight="false"
+            class="w-full max-w-[700px] block md:hidden"
+          />
         </div>
         <div class="hidden lg:block right">
           <UAvatar

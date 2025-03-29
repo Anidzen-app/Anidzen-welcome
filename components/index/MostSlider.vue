@@ -37,18 +37,28 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="max-h-[500px] lg:max-h-[400px] overflow-hidden bg-(--ui-bg-elevated)/25  md:rounded-lg relative">
+  <div class="max-h-[550px] lg:max-h-[400px] overflow-hidden bg-(--ui-bg-elevated)/25  md:rounded-lg relative">
     <div
-      class="hidden md:block absolute top-0 h-1 bg-primary-400 z-10"
+      class="absolute top-0 h-0.5 md:h-1 bg-primary-400 z-10"
       :style="{ width: progress + '%' }"
     />
 
     <swiper-container
       ref="swiperRef"
       :slides-per-view="1"
-      :space-between="30"
       grab-cursor
       loop
+      :breakpoints="{
+        100: {
+          spaceBetween: '10'
+        },
+        768: {
+          spaceBetween: '20'
+        },
+        1024: {
+          spaceBetween: '20'
+        }
+      }"
       :history="{
         key: 'most-slider'
       }"
@@ -66,17 +76,19 @@ onMounted(async () => {
             <NuxtImg
               :src="slide.poster.originalUrl"
               :alt="slide.name"
-              class="w-full md:min-w-[300px] object-cover h-[500px] md:h-[400px]"
+              class="w-full md:min-w-[300px] object-cover h-[550px] md:h-[400px]"
             />
           </div>
-          <div class="py-4 pr-5 flex flex-col bottom-0 absolute md:relative bg-(--ui-bg) md:bg-transparent w-full md:w-auto">
-            <h2 class="text-2xl md:text-3xl text-center">{{ slide.russian }}</h2>
+          <div class="py-4  flex flex-col bottom-0 absolute md:relative bg-linear-to-t from-(--ui-bg) from-45% md:bg-transparent w-full md:w-auto">
+            <h2 class="text-2xl md:text-3xl text-center md:text-left line-clamp-2 md:line-clamp-3">
+              {{ slide.russian }}
+            </h2>
             <span class="hidden md:block opacity-50 text-xl">{{ slide.name }}</span>
-        	<div class="hidden md:block mt-3">
-				<p class="opacity-50 line-clamp-5">
-					{{ clearShikimoriDescription(slide.description) }}
-				</p>
-			</div>
+            <div class="hidden md:block mt-3">
+              <p class="opacity-50 line-clamp-5">
+                {{ clearShikimoriDescription(slide.description) }}
+              </p>
+            </div>
             <div class="flex gap-3 mt-3 items-center justify-center md:justify-start">
               <UButton
                 label="Смотреть"
