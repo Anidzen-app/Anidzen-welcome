@@ -37,7 +37,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="max-h-[550px] lg:max-h-[400px] overflow-hidden bg-(--ui-bg-elevated)/25  md:rounded-lg relative">
+  <div class="max-h-[520px] lg:max-h-[400px] overflow-hidden md:bg-(--ui-bg-elevated)/25  md:rounded-lg relative">
     <div
       class="absolute top-0 h-0.5 md:h-1 bg-primary-400 z-10"
       :style="{ width: progress + '%' }"
@@ -76,14 +76,19 @@ onMounted(async () => {
             <NuxtImg
               :src="slide.poster.originalUrl"
               :alt="slide.name"
-              class="w-full md:min-w-[300px] object-cover h-[550px] md:h-[400px]"
+              class="w-full md:min-w-[300px] object-cover h-[520px] md:h-[400px]"
             />
           </div>
-          <div class="py-4  flex flex-col bottom-0 absolute md:relative bg-linear-to-t from-(--ui-bg) from-45% md:bg-transparent w-full md:w-auto">
+          <div class="py-4 px-4 md:pr-4 flex flex-col bottom-0 absolute md:relative bg-linear-to-t from-(--ui-bg) from-45% md:bg-transparent md:from-transparent w-full md:w-auto">
             <h2 class="text-2xl md:text-3xl text-center md:text-left line-clamp-2 md:line-clamp-3">
               {{ slide.russian }}
             </h2>
             <span class="hidden md:block opacity-50 text-xl">{{ slide.name }}</span>
+            <div class="mt-1 md:mt-3 text-center md:text-left opacity-50 text-sm md:opacity-100 md:text-base">
+              <span>Оценка: {{ slide.score }}</span> |
+              <span>Серии։ {{ slide.episodes }}</span> |
+              <span>{{ slide.genres[0].russian }}</span>
+            </div>
             <div class="hidden md:block mt-3">
               <p class="opacity-50 line-clamp-5">
                 {{ clearShikimoriDescription(slide.description) }}

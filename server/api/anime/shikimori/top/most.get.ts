@@ -17,14 +17,15 @@ export default defineEventHandler(async (event) => {
           name
           russian
           score
+          episodes
+          status
           poster {
             originalUrl
           }
-          description
-          videos {
-            id
-            playerUrl
+          genres {
+            russian
           }
+          description
         }
       }
     `
