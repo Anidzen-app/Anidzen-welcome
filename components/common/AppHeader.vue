@@ -7,7 +7,6 @@ const sidebarStore = useSidebarStore()
 <template>
   <div>
     <header
-      id="header"
       class="header py-3 md:bg-(--ui-bg)/75 md:backdrop-blur md:border-b md:border-(--ui-border) h-(--ui-header-height) w-full fixed md:sticky top-0 z-50"
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)] px-0">
