@@ -3,8 +3,6 @@ import { useSidebarStore } from '~/stores/sidebar'
 
 const config = useRuntimeConfig()
 const sidebarStore = useSidebarStore()
-const open = ref(false)
-
 const appVersion = config.public.appVersion
 
 const links = [
@@ -12,27 +10,28 @@ const links = [
     {
       label: 'Главная',
       icon: 'i-lucide-house',
-      to: '/',
-      onSelect: () => {
-        open.value = false
-      }
+      to: '/'
     }
-  ], [{
-    label: 'Feedback',
-    icon: 'i-lucide-message-circle',
-    to: 'https://github.com/nuxt-ui-pro/dashboard',
-    target: '_blank'
-  }, {
-    label: 'Help & Support',
-    icon: 'i-lucide-info',
-    to: 'https://github.com/nuxt/ui-pro',
-    target: '_blank'
-  }]]
+    // {
+    //   label: 'Главная',
+    //   icon: 'i-lucide-house',
+    //   to: '/',
+    //   defaultOpen: true,
+    //   children: [
+    //     {
+    //       label: 'Introduction',
+    //       description: 'Fully styled and customizable components for Nuxt.',
+    //       icon: 'i-lucide-house'
+    //     }
+    //   ]
+    // }
+  ]
+]
 </script>
 
 <template>
   <UDashboardSidebar
-    v-model:open="open"
+	  id="default"
     collapsible
     :collapsed="sidebarStore.collapsible"
     class="bg-(--ui-bg-elevated)/25"

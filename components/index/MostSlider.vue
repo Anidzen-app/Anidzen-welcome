@@ -37,7 +37,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="max-h-[520px] lg:max-h-[400px] overflow-hidden md:bg-(--ui-bg-elevated)/25  md:rounded-lg relative">
+  <div class="max-h-[520px] md:max-h-[400px] overflow-hidden md:bg-(--ui-bg-elevated)/25  md:rounded-lg relative">
     <div
       class="hidden md:block absolute top-0 h-0.5 md:h-1 bg-primary-400 z-10"
       :style="{ width: progress + '%' }"
@@ -83,9 +83,9 @@ onMounted(async () => {
             <h2 class="text-2xl md:text-3xl text-center md:text-left line-clamp-2 lg:line-clamp-2">
               {{ slide.russian }}
             </h2>
-			  <div class="hidden md:block">
-				  <span class="opacity-50 text-xl line-clamp-1">{{ slide.name }}</span>
-			  </div>
+            <div class="hidden md:block">
+              <span class="opacity-50 text-xl line-clamp-1">{{ slide.name }}</span>
+            </div>
             <div class="mt-1 md:mt-3 text-center md:text-left opacity-50 text-sm md:opacity-100 md:text-base">
               <span>Оценка: {{ slide.score }}</span> |
               <span>Серии։ {{ slide.episodes }}</span> |
