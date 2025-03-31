@@ -38,7 +38,7 @@
 		"@pinia/nuxt": "^0.10.1",
 		"@tauri-apps/cli": "^2",
 		"@vite-pwa/assets-generator": "^0.2.6",
-		"@vite-pwa/nuxt": "^0.10.6",
+		"@vite-pwa/nuxt": "^1.0.0",
 		"eslint": "^9.22.0",
 		"nuxt-swiper": "^2.0.0",
 		"typescript": "^5.8.2",
