@@ -3,15 +3,12 @@
 </script>
 
 <template>
-  <NuxtLoadingIndicator />
-  <CommonCookieConsent />
-
   <UApp :toaster="{ expand: false }">
-    <!--    <VitePwaManifest title="Anidzen" /> -->
-    <UMain>
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </UMain>
+    <NuxtLoadingIndicator />
+    <CommonCookieConsent />
+
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </UApp>
 </template>

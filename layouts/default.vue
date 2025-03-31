@@ -1,15 +1,11 @@
 <template>
   <div>
-    <UDashboardGroup
-      unit="rem"
-      storage="cookie"
-      storage-key="anidzen-one-dash-collapse"
-    >
+    <UDashboardGroup>
       <CommonSidePanel />
-      <div>
+      <div class="overflow-y-auto flex-1">
         <CommonAppHeader />
         <div>
-          <UContainer class="w-auto max-w-[var(--container-8xl)] mt-0 md:mt-5 px-0 py-0">
+          <UContainer class="max-w-[var(--container-8xl)] mt-0 md:mt-5 px-0 py-0">
             <div>
               <slot />
             </div>

@@ -31,7 +31,7 @@ const links = [
 
 <template>
   <UDashboardSidebar
-	  id="default"
+    id="default"
     collapsible
     :collapsed="sidebarStore.collapsible"
     class="bg-(--ui-bg-elevated)/25"
