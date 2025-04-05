@@ -1,7 +1,0 @@
-@import "../../node_modules/tailwindcss/dist/lib.d.mts" theme(static);
-@import "module.d.ts";
-
-@theme static {
-	--container-8xl: 130rem;
-	--font-sans: 'Public Sans', sans-serif;
-}
