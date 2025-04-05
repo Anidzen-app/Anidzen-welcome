@@ -1,42 +1,23 @@
 <script setup lang="ts">
-const imagesOne = ref([
-  'https://cdn.myanimelist.net/images/anime/1015/138006.webp',
-  'https://cdn.myanimelist.net/images/anime/1245/116760.webp',
-  'https://cdn.myanimelist.net/images/anime/1122/96435.webp',
-  'https://cdn.myanimelist.net/images/anime/10/51723.webp',
-  'https://cdn.myanimelist.net/images/anime/1825/110716.webp',
-  'https://cdn.myanimelist.net/images/anime/1379/145452.webp',
-  'https://cdn.myanimelist.net/images/anime/1379/145452.webp',
-  'https://cdn.myanimelist.net/images/anime/5/87048.webp',
-  'https://cdn.myanimelist.net/images/anime/1084/112813.webp',
-  'https://cdn.myanimelist.net/images/anime/6/79597.webp'
-])
+const { data: mostData } = await useAsyncData('api-anime-shikimori-marquee-most', () =>
+  $fetch('/api/anime/shikimori/marquee/most')
+)
 
-const imagesTwo = ref([
-  'https://cdn.myanimelist.net/images/anime/1015/138006.webp',
-  'https://cdn.myanimelist.net/images/anime/1245/116760.webp',
-  'https://cdn.myanimelist.net/images/anime/1122/96435.webp',
-  'https://cdn.myanimelist.net/images/anime/10/51723.webp',
-  'https://cdn.myanimelist.net/images/anime/1825/110716.webp',
-  'https://cdn.myanimelist.net/images/anime/1379/145452.webp',
-  'https://cdn.myanimelist.net/images/anime/1379/145452.webp',
-  'https://cdn.myanimelist.net/images/anime/5/87048.webp',
-  'https://cdn.myanimelist.net/images/anime/1084/112813.webp',
-  'https://cdn.myanimelist.net/images/anime/6/79597.webp'
-])
+const mostAnimes = mostData?.value?.data.animes
 
-const imagesThree = ref([
-  'https://cdn.myanimelist.net/images/anime/1015/138006.webp',
-  'https://cdn.myanimelist.net/images/anime/1245/116760.webp',
-  'https://cdn.myanimelist.net/images/anime/1122/96435.webp',
-  'https://cdn.myanimelist.net/images/anime/10/51723.webp',
-  'https://cdn.myanimelist.net/images/anime/1825/110716.webp',
-  'https://cdn.myanimelist.net/images/anime/1379/145452.webp',
-  'https://cdn.myanimelist.net/images/anime/1379/145452.webp',
-  'https://cdn.myanimelist.net/images/anime/5/87048.webp',
-  'https://cdn.myanimelist.net/images/anime/1084/112813.webp',
-  'https://cdn.myanimelist.net/images/anime/6/79597.webp'
-])
+const { data: anonsData } = await useAsyncData('api-anime-shikimori-marquee-anons', () =>
+  $fetch('/api/anime/shikimori/marquee/anons')
+)
+
+const anonsAnimes = anonsData?.value?.data.animes
+
+const { data: newData } = await useAsyncData('api-anime-shikimori-marquee-new', () =>
+  $fetch('/api/anime/shikimori/marquee/new')
+)
+
+const newAnimes = newData?.value?.data.animes
+
+console.log(newAnimes)
 </script>
 
 <template>
@@ -47,9 +28,10 @@ const imagesThree = ref([
       :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }"
     >
       <NuxtImg
-        v-for="(image, index) in imagesOne"
+        v-for="(datum, index) in mostAnimes"
         :key="index"
-        :src="image"
+        :alt="datum.name"
+        :src="datum.poster.preview2xUrl"
         class="pointer-events-none select-none w-[100px] rounded-lg lg:w-[110px] xl:w-[140px] 2xl:w-[200px] 2xl:rounded-xl"
       />
     </UPageMarquee>
@@ -58,9 +40,10 @@ const imagesThree = ref([
       :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }"
     >
       <NuxtImg
-        v-for="(image, index) in imagesTwo"
+        v-for="(datum, index) in anonsAnimes"
         :key="index"
-        :src="image"
+        :alt="datum.name"
+        :src="datum.poster.preview2xUrl"
         class="pointer-events-none select-none w-[100px] rounded-lg lg:w-[110px] xl:w-[140px] 2xl:w-[200px] 2xl:rounded-xl"
       />
     </UPageMarquee>
@@ -70,9 +53,10 @@ const imagesThree = ref([
       :ui="{ root: '[--gap:--spacing(4)]', content: 'w-auto py-1' }"
     >
       <NuxtImg
-        v-for="(image, index) in imagesThree"
+        v-for="(datum, index) in newAnimes"
         :key="index"
-        :src="image"
+        :alt="datum.name"
+        :src="datum.poster.preview2xUrl"
         class="pointer-events-none select-none w-[100px] rounded-lg lg:w-[110px] xl:w-[140px] 2xl:w-[200px] 2xl:rounded-xl"
       />
     </UPageMarquee>
