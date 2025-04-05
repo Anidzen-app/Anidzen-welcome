@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui-pro',
-    // '@vite-pwa/nuxt',
     '@pinia/nuxt',
     'nuxt-swiper'
   ],
@@ -20,7 +19,7 @@ export default defineNuxtConfig({
       appVersion: process.env.APP_VERSION || '1.0.0'
     },
     appSsrDebug: process.env.APP_SSR_DEBUG || 'false',
-    shikimoriApiBaseUrl: process.env.SHIKIMORI_API_BASE_URL || '/'
+    shikimoriApiBaseUrl: process.env.SHIKIMORI_API_BASE_URL || 'https://shikimori.one/api/graphql'
   },
 
   routeRules: {
@@ -35,14 +34,6 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-15',
 
-  vite: {
-    clearScreen: false,
-    envPrefix: ['VITE_', 'TAURI_'],
-    server: {
-      strictPort: true
-    }
-  },
-
   eslint: {
     config: {
       stylistic: {
@@ -52,11 +43,4 @@ export default defineNuxtConfig({
     }
   }
 
-  // pwa: {
-  //   manifest: {
-  //     name: 'Anidzen',
-  //     short_name: 'Anidzen',
-  //     description: 'anidzen -- best app for anime'
-  //   }
-  // }
 })

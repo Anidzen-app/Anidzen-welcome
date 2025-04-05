@@ -3,5 +3,8 @@
 </script>
 
 <template>
-  www
 </template>
+
+<style scoped>
+
+</style>

@@ -1,6 +1,5 @@
-@import "tailwindcss" theme(static);
-@import "@nuxt/ui";
-
+@import "../../node_modules/tailwindcss/dist/lib.d.mts" theme(static);
+@import "module.d.ts";
 
 @theme static {
 	--container-8xl: 130rem;
