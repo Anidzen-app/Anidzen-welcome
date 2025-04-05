@@ -1,44 +1,131 @@
 <script setup lang="ts">
-import { useSidebarStore } from '~/stores/sidebar'
-
-const sidebarStore = useSidebarStore()
+const items = ref<NavigationMenuItem[]>([
+  {
+    label: 'Guide',
+    icon: 'i-lucide-book-open',
+    to: '/getting-started',
+    children: [
+      {
+        label: 'Introduction',
+        description: 'Fully styled and customizable components for Nuxt.',
+        icon: 'i-lucide-house'
+      },
+      {
+        label: 'Installation',
+        description: 'Learn how to install and configure Nuxt UI in your application.',
+        icon: 'i-lucide-cloud-download'
+      },
+      {
+        label: 'Icons',
+        icon: 'i-lucide-smile',
+        description: 'You have nothing to do, @nuxt/icon will handle it automatically.'
+      },
+      {
+        label: 'Colors',
+        icon: 'i-lucide-swatch-book',
+        description: 'Choose a primary and a neutral color from your Tailwind CSS theme.'
+      },
+      {
+        label: 'Theme',
+        icon: 'i-lucide-cog',
+        description: 'You can customize components by using the `class` / `ui` props or in your app.config.ts.'
+      }
+    ]
+  },
+  {
+    label: 'Composables',
+    icon: 'i-lucide-database',
+    to: '/composables',
+    children: [
+      {
+        label: 'defineShortcuts',
+        icon: 'i-lucide-file-text',
+        description: 'Define shortcuts for your application.',
+        to: '/composables/define-shortcuts'
+      },
+      {
+        label: 'useOverlay',
+        icon: 'i-lucide-file-text',
+        description: 'Display a modal/slideover within your application.',
+        to: '/composables/use-overlay'
+      },
+      {
+        label: 'useToast',
+        icon: 'i-lucide-file-text',
+        description: 'Display a toast within your application.',
+        to: '/composables/use-toast'
+      }
+    ]
+  },
+  {
+    label: 'Components',
+    icon: 'i-lucide-box',
+    to: '/components',
+    active: true,
+    children: [
+      {
+        label: 'Link',
+        icon: 'i-lucide-file-text',
+        description: 'Use NuxtLink with superpowers.',
+        to: '/components/link'
+      },
+      {
+        label: 'Modal',
+        icon: 'i-lucide-file-text',
+        description: 'Display a modal within your application.',
+        to: '/components/modal'
+      },
+      {
+        label: 'NavigationMenu',
+        icon: 'i-lucide-file-text',
+        description: 'Display a list of links.',
+        to: '/components/navigation-menu'
+      },
+      {
+        label: 'Pagination',
+        icon: 'i-lucide-file-text',
+        description: 'Display a list of pages.',
+        to: '/components/pagination'
+      },
+      {
+        label: 'Popover',
+        icon: 'i-lucide-file-text',
+        description: 'Display a non-modal dialog that floats around a trigger element.',
+        to: '/components/popover'
+      },
+      {
+        label: 'Progress',
+        icon: 'i-lucide-file-text',
+        description: 'Show a horizontal bar to indicate task progression.',
+        to: '/components/progress'
+      }
+    ]
+  },
+  {
+    label: 'GitHub',
+    icon: 'i-simple-icons-github',
+    badge: '3.8k',
+    to: 'https://github.com/nuxt/ui',
+    target: '_blank'
+  },
+  {
+    label: 'Help',
+    icon: 'i-lucide-circle-help',
+    disabled: true
+  }
+])
 </script>
 
 <template>
   <div>
     <header
-      class="header py-3 md:bg-(--ui-bg)/75 md:backdrop-blur md:border-b md:border-(--ui-border) h-(--ui-header-height) w-full fixed md:sticky top-0 z-50"
+      class="header py-3 md:bg-(--ui-bg)/75 md:backdrop-blur md:border-b md:border-(--ui-border) h-(--ui-header-height) w-full fixed md:fixed top-0 z-50"
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)] px-0">
-        <div class="left">
-          <UButton
-            size="xl"
-            icon="i-lucide-menu"
-            class="hidden lg:flex cursor-pointer"
-            variant="subtle"
-            @click="sidebarStore.toggle()"
-          />
-        </div>
         <div class="center flex items-center w-full px-4 md:px-10 justify-center">
-          <UInput
-            icon="i-lucide-search"
-            size="xl"
-            placeholder="Что прикажете найти, сенпай?"
-            variant="soft"
-            class="w-full max-w-[700px] hidden md:block"
-          />
-          <UInput
-            icon="i-lucide-search"
-            size="xl"
-            placeholder="Что искать, сенпай?"
-            :highlight="false"
-            class="w-full max-w-[700px] block md:hidden"
-          />
-        </div>
-        <div class="hidden lg:block right">
-          <UAvatar
-            src="https://avatars.githubusercontent.com/u/140258231?s=400&u=fb27d8779ed74ac3d21855706638fcb9311660f0&v=4"
-            size="xl"
+          <UNavigationMenu
+            :items="items"
+            class="w-full justify-center"
           />
         </div>
       </UContainer>
