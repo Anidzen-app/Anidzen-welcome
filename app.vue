@@ -6,6 +6,7 @@
   <UApp :toaster="{ expand: false }">
     <NuxtLoadingIndicator />
     <CommonCookieConsent />
+
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
