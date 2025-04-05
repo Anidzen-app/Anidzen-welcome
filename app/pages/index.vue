@@ -4,16 +4,15 @@
 
 <template>
   <div>
-    <UDashboardPanel id="index">
-      <IndexMostSlider />
-      <div class="h-[2000px]">
-        wdwd
+    <section class="relative flex h-dvh">
+      <div class="hidden lg:block w-1/2">
+        <UiAnimeMarquee />
       </div>
-      <div class="h-[2000px]">
-        wdwd
-      </div> <div class="h-[2000px]">
-        wdwd
+      <div class="w-full lg:w-1/2">
+        <div class="flex items-center justify-center h-full">
+          wdwdwd
+        </div>
       </div>
-    </UDashboardPanel>
+    </section>
   </div>
 </template>
