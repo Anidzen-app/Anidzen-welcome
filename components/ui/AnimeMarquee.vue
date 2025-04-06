@@ -19,7 +19,7 @@ const newAnimes = newData?.value?.data.animes
 </script>
 
 <template>
-  <div class="flex flex-col flex-1 h-dvh gap-4">
+  <div class="flex flex-col h-dvh gap-4">
     <div class="h-full">
       <UPageMarquee
         :ui="{ root: '[--gap:--spacing(4)] h-full', content: 'w-full py-0 h-full justify-center flex-1' }"

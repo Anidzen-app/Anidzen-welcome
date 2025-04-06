@@ -7,7 +7,7 @@
           <slot />
         </div>
       </UContainer>
-      <div class="hidden lg:block w-full overflow-hidden absolute -z-10">
+      <div class="hidden lg:block w-full h-dvh overflow-hidden absolute -z-10">
         <UiAnimeMarquee />
       </div>
     </section>
