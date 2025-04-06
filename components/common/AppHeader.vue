@@ -12,7 +12,7 @@ const items = ref<NavigationMenuItem[]>([
     active: false,
     children: [
       {
-        label: 'AniDzen — Аниме-платформа',
+        label: 'Anidzen — Аниме-платформа',
         icon: 'i-lucide-tv',
         description: 'Погрузись в мир аниме — все что нужно, в одном месте!',
         to: 'https://watch.anidzen.com',
@@ -23,18 +23,31 @@ const items = ref<NavigationMenuItem[]>([
         icon: 'i-lucide-cloud-sun',
         description: 'Sora.QL — быстрый GraphQL API для аниме. Получите всю информацию о аниме, персонажах и эпизодах через мощный API с поддержкой нескольких языков.',
         to: 'https://sora.anidzen.com'
+      },
+      {
+        label: 'Ota-ku — Твой Личный Портал в Мир Аниме',
+        icon: 'i-lucide-tv',
+        description: 'Лучшие аниме онлайн бесплатно с русской озвучкой. Погружайся в мир аниме на ota-ku.am — твой портал для просмотра аниме без границ!',
+        to: 'https://ota-ku.am'
       }
     ]
   },
   {
     label: 'О нас',
     icon: 'i-lucide-user',
-    to: '/about'
+    to: '/',
+    active: false
   },
   {
     label: 'GitHub',
     icon: 'i-simple-icons-github',
     to: 'https://github.com/Anidzen-app',
+    target: '_blank'
+  },
+  {
+    label: 'Telegram',
+    icon: 'i-simple-icons-telegram',
+    to: 'https://t.me/AnidzenEcosystems',
     target: '_blank'
   }
 ])

@@ -1,31 +1,41 @@
 <script setup lang="ts">
 const features = ref([
   {
-    title: 'Icons',
-    description: 'Nuxt UI integrates with Nuxt Icon to access over 200,000+ icons from Iconify.',
-    icon: 'i-lucide-smile',
-    to: '/getting-started/icons'
+    title: 'Всё в одном месте',
+    description: 'Аниме, манга, арты, новости, фан-контент — всё, что ты любишь, собрано в AniDzen. Больше не нужно искать по всему интернету — просто заходи.',
+    icon: 'i-lucide-globe',
+    to: 'https://sora.anidzen.com'
   },
   {
-    title: 'Fonts',
-    description: 'Nuxt UI integrates with Nuxt Fonts to provide plug-and-play font optimization.',
-    icon: 'i-lucide-a-large-small',
-    to: '/getting-started/fonts'
+    title: 'Открытый API',
+    description: 'Стань частью вселенной AniDzen. С помощью Sora.QL — нашего собственного GraphQL API — ты можешь создавать собственные аниме-приложения, ботов, виджеты или даже строить свои миры. Надёжно, гибко, масштабируемо.',
+    icon: 'i-lucide-cloud-sun',
+    to: 'https://sora.anidzen.com'
   },
   {
-    title: 'Color Mode',
-    description: 'Nuxt UI integrates with Nuxt Color Mode to switch between light and dark.',
-    icon: 'i-lucide-sun-moon',
-    to: '/getting-started/color-mode'
+    title: 'На любом устройстве',
+    description: 'AniDzen всегда с тобой. Смотри аниме, читай мангу и оставайся в курсе новостей с любого устройства: смартфона, планшета, ноутбука, телевизора и даже смарт-холодильника. Мы оптимизированы под всё, даже под мечту.',
+    icon: 'i-lucide-monitor-smartphone',
+    to: '/#platforms'
   }
 ])
 const links = ref([
   {
-    label: 'Explore components',
-    to: '/components/app',
-    color: 'neutral',
-    variant: 'subtle',
-    trailingIcon: 'i-lucide-arrow-right'
+    label: 'Начать смотреть',
+    to: 'https://watch.anidzen.com',
+    color: 'primary',
+    variant: 'solid',
+    size: 'xl',
+    trailingIcon: 'i-lucide-play-circle'
+  },
+  {
+    label: 'Поддержать проект',
+    to: '/donate',
+    color: 'primary',
+    variant: 'soft',
+    size: 'xl',
+    disabled: true,
+    trailingIcon: 'i-lucide-heart'
   }
 ])
 </script>
@@ -40,7 +50,7 @@ const links = ref([
               title="Добро пожаловать в AniDzen — Вселенную аниме!"
               description="AniDzen — твой универсальный мир аниме. Всё, что ты хочешь знать, увидеть и почувствовать, в одном месте!"
               :features="features"
-			  orientation="horizontal"
+              orientation="horizontal"
               :links="links"
               :ui="{ container: 'py-0 sm:py-0 lg:py-0 mx-0 px-0 sm:px-0 lg:px-0 max-w-auto' }"
             />
