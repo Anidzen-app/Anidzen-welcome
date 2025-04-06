@@ -16,12 +16,12 @@ const items = ref<NavigationMenuItem[]>([
         icon: 'i-lucide-tv',
         description: 'Всё, что нужно для фанатов аниме — и сразу в одном месте!',
         to: 'https://watch.anidzen.com',
-		disabled: true
+        disabled: true
       },
       {
         label: 'Sora Graph-ql API',
         icon: 'i-lucide-cloud-sun',
-		description: 'Sora.QL — быстрый GraphQL API для аниме. Получите всю информацию о аниме, персонажах и эпизодах через мощный API с поддержкой нескольких языков.',
+        description: 'Sora.QL — быстрый GraphQL API для аниме. Получите всю информацию о аниме, персонажах и эпизодах через мощный API с поддержкой нескольких языков.',
         to: 'https://sora.anidzen.com'
       }
     ]
