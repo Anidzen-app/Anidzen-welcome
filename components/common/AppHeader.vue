@@ -14,57 +14,15 @@ const items = ref<NavigationMenuItem[]>([
       {
         label: 'AniDzen — Аниме-платформа',
         icon: 'i-lucide-tv',
-        description: 'Смотреть аниме онлайн с русской и английской озвучкой.',
-        to: 'https://watch.anidzen.com'
+        description: 'Всё, что нужно для фанатов аниме — и сразу в одном месте!',
+        to: 'https://watch.anidzen.com',
+		disabled: true
       },
       {
-        label: 'API',
-        icon: 'i-lucide-code',
-        description: 'Документация по API для разработчиков.',
-        to: '/api-docs'
-      }
-    ]
-  },
-  {
-    label: 'Components',
-    icon: 'i-lucide-box',
-    to: '/components',
-    children: [
-      {
-        label: 'Link',
-        icon: 'i-lucide-file-text',
-        description: 'Use NuxtLink with superpowers.',
-        to: '/components/link'
-      },
-      {
-        label: 'Modal',
-        icon: 'i-lucide-file-text',
-        description: 'Display a modal within your application.',
-        to: '/components/modal'
-      },
-      {
-        label: 'NavigationMenu',
-        icon: 'i-lucide-file-text',
-        description: 'Display a list of links.',
-        to: '/components/navigation-menu'
-      },
-      {
-        label: 'Pagination',
-        icon: 'i-lucide-file-text',
-        description: 'Display a list of pages.',
-        to: '/components/pagination'
-      },
-      {
-        label: 'Popover',
-        icon: 'i-lucide-file-text',
-        description: 'Display a non-modal dialog that floats around a trigger element.',
-        to: '/components/popover'
-      },
-      {
-        label: 'Progress',
-        image: 'public/favicon.ico',
-        description: 'Show a horizontal bar to indicate task progression.',
-        to: '/components/progress'
+        label: 'Sora Graph-ql API',
+        icon: 'i-lucide-cloud-sun',
+		description: 'Sora.QL — быстрый GraphQL API для аниме. Получите всю информацию о аниме, персонажах и эпизодах через мощный API с поддержкой нескольких языков.',
+        to: 'https://sora.anidzen.com'
       }
     ]
   },
@@ -109,18 +67,17 @@ const items = ref<NavigationMenuItem[]>([
               variant="link"
               :items="items"
               class="w-full justify-center"
-            >
-            </UNavigationMenu>
+            />
           </UContainer>
         </div>
         <div class="right flex items-center">
           <UColorModeButton
             size="xl"
+            color="primary"
             variant="soft"
           />
         </div>
       </UContainer>
     </header>
-	  <UIcon></UIcon>
   </div>
 </template>
