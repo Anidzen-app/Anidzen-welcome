@@ -121,14 +121,32 @@ const items = ref<NavigationMenuItem[]>([
       class="header py-3 md:bg-(--ui-bg)/75 md:backdrop-blur md:border-b md:border-(--ui-border) h-(--ui-header-height) w-full fixed md:fixed top-0 z-50"
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)] px-0">
+		  <div class="flex items-center">
+			  <div class="flex items-center justify-between gap-2">
+				  <UColorModeImage
+					  light="/anidzen-light.svg"
+					  dark="/anidzen-dark.svg"
+					  :width="50"
+					  :height="50"
+				  />
+				  <h2
+					  class="text-3xl font-bold"
+				  >
+					  <span class="text-(--ui-primary)">Ani</span>dzen
+				  </h2>
+			  </div>
+		  </div>
         <div class="center flex items-center w-full px-4 md:px-10 justify-center">
           <UContainer>
-			  <UNavigationMenu
-				  :items="items"
-				  class="w-full justify-center"
-			  />
-		  </UContainer>
+            <UNavigationMenu
+              :items="items"
+              class="w-full justify-center"
+            />
+          </UContainer>
         </div>
+		  <div class="right flex items-center">
+			  <UColorModeButton size="xl" variant="soft" />
+		  </div>
       </UContainer>
     </header>
   </div>
