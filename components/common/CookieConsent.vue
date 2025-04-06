@@ -1,15 +1,7 @@
 <script setup lang="ts">
-import { isTauri } from '@tauri-apps/api/core'
-import { Capacitor } from '@capacitor/core'
-
 const toast = useToast()
 
 onMounted(async () => {
-  const isTauriApp = isTauri()
-  const isCapacitor = Capacitor.isNativePlatform()
-
-  if (isTauriApp || isCapacitor) return
-
   const cookie = useCookie('cookie-consent')
   if (cookie.value === 'accepted') {
     return

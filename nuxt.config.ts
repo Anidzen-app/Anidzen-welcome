@@ -1,13 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui-pro',
-    // '@vite-pwa/nuxt',
-    '@pinia/nuxt',
-    'nuxt-swiper'
-  ],
+  modules: ['@nuxt/eslint', '@nuxt/image', '@nuxt/ui-pro', 'nuxt-swiper', '@nuxtjs/i18n'],
 
   devtools: {
     enabled: true
@@ -20,7 +13,7 @@ export default defineNuxtConfig({
       appVersion: process.env.APP_VERSION || '1.0.0'
     },
     appSsrDebug: process.env.APP_SSR_DEBUG || 'false',
-    shikimoriApiBaseUrl: process.env.SHIKIMORI_API_BASE_URL || '/'
+    shikimoriApiBaseUrl: process.env.SHIKIMORI_API_BASE_URL || 'https://shikimori.one/api/graphql'
   },
 
   routeRules: {
@@ -35,14 +28,6 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-15',
 
-  vite: {
-    clearScreen: false,
-    envPrefix: ['VITE_', 'TAURI_'],
-    server: {
-      strictPort: true
-    }
-  },
-
   eslint: {
     config: {
       stylistic: {
@@ -50,13 +35,22 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  i18n: {
+    bundle: {
+      optimizeTranslationDirective: false
+    },
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en-US.json', name: 'English' },
+      { code: 'hy', iso: 'hy-AM', file: 'hy-AM.json', name: 'Հայերեն' },
+      { code: 'ja', iso: 'ja-JP', file: 'ja-JP.json', name: '日本語' },
+      { code: 'ru', iso: 'ru-RU', file: 'ru-RU.json', name: 'Русский' }
+    ],
+    lazy: false,
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    vueI18n: './i18n.config.ts'
   }
 
-  // pwa: {
-  //   manifest: {
-  //     name: 'Anidzen',
-  //     short_name: 'Anidzen',
-  //     description: 'anidzen -- best app for anime'
-  //   }
-  // }
 })

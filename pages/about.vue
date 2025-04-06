@@ -4,6 +4,10 @@
 
 <template>
   <div>
-    <IndexPrimaryHeader />
+    wdwd
   </div>
 </template>
+
+<style scoped>
+
+</style>

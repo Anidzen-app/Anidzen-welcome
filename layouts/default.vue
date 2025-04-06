@@ -1,18 +1,16 @@
 <template>
   <div>
-    <UDashboardGroup>
-      <CommonSidePanel />
-      <div class="overflow-y-auto flex-1">
-        <CommonAppHeader />
+    <CommonAppHeader />
+    <section class="relative flex h-dvh">
+      <UContainer class="max-w-8xl">
         <div>
-          <UContainer class="max-w-[var(--container-8xl)] mt-0 md:mt-5 px-0 py-0">
-            <div>
-              <slot />
-            </div>
-          </UContainer>
+          <slot />
         </div>
+      </UContainer>
+      <div class="hidden lg:block w-full h-dvh overflow-hidden absolute -z-10">
+        <UiAnimeMarquee />
       </div>
-    </udashboardgroup>
+    </section>
   </div>
 </template>
 

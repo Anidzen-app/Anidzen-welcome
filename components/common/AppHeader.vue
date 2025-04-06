@@ -1,44 +1,93 @@
 <script setup lang="ts">
-import { useSidebarStore } from '~/stores/sidebar'
-
-const sidebarStore = useSidebarStore()
+const items = ref<NavigationMenuItem[]>([
+  {
+    label: 'Главная',
+    icon: 'i-lucide-house',
+    to: '/'
+  },
+  {
+    label: 'Экосистема',
+    icon: 'i-lucide-atom',
+    to: '/',
+    active: false,
+    children: [
+      {
+        label: 'Anidzen — Аниме-платформа',
+        icon: 'i-lucide-tv',
+        description: 'Погрузись в мир аниме — все что нужно, в одном месте!',
+        to: 'https://watch.anidzen.com',
+        disabled: true
+      },
+      {
+        label: 'Sora Graph-ql API',
+        icon: 'i-lucide-cloud-sun',
+        description: 'Sora.QL — быстрый GraphQL API для аниме. Получите всю информацию о аниме, персонажах и эпизодах через мощный API с поддержкой нескольких языков.',
+        to: 'https://sora.anidzen.com'
+      },
+      {
+        label: 'Ota-ku — Твой Личный Портал в Мир Аниме',
+        icon: 'i-lucide-tv',
+        description: 'Лучшие аниме онлайн бесплатно с русской озвучкой. Погружайся в мир аниме на ota-ku.am — твой портал для просмотра аниме без границ!',
+        to: 'https://ota-ku.am'
+      }
+    ]
+  },
+  {
+    label: 'О нас',
+    icon: 'i-lucide-user',
+    to: '/',
+    active: false
+  },
+  {
+    label: 'GitHub',
+    icon: 'i-simple-icons-github',
+    to: 'https://github.com/Anidzen-app',
+    target: '_blank'
+  },
+  {
+    label: 'Telegram',
+    icon: 'i-simple-icons-telegram',
+    to: 'https://t.me/AnidzenEcosystems',
+    target: '_blank'
+  }
+])
 </script>
 
 <template>
   <div>
     <header
-      class="header py-3 md:bg-(--ui-bg)/75 md:backdrop-blur md:border-b md:border-(--ui-border) h-(--ui-header-height) w-full fixed md:sticky top-0 z-50"
+      class="header py-3 md:bg-(--ui-bg)/25 md:backdrop-blur md:border-b md:border-(--ui-border) h-(--ui-header-height) w-full fixed md:fixed top-0 z-50"
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)] px-0">
-        <div class="left">
-          <UButton
-            size="xl"
-            icon="i-lucide-menu"
-            class="hidden lg:flex cursor-pointer"
-            variant="subtle"
-            @click="sidebarStore.toggle()"
-          />
+        <div class="flex items-center">
+          <div class="flex items-center justify-between gap-2">
+            <UColorModeImage
+              light="/anidzen-light.svg"
+              dark="/anidzen-dark.svg"
+              :width="50"
+              :height="50"
+            />
+            <h2
+              class="text-3xl font-bold"
+            >
+              <span class="text-(--ui-primary)">Ani</span>dzen
+            </h2>
+          </div>
         </div>
         <div class="center flex items-center w-full px-4 md:px-10 justify-center">
-          <UInput
-            icon="i-lucide-search"
-            size="xl"
-            placeholder="Что прикажете найти, сенпай?"
-            variant="soft"
-            class="w-full max-w-[700px] hidden md:block"
-          />
-          <UInput
-            icon="i-lucide-search"
-            size="xl"
-            placeholder="Что искать, сенпай?"
-            :highlight="false"
-            class="w-full max-w-[700px] block md:hidden"
-          />
+          <UContainer>
+            <UNavigationMenu
+              variant="link"
+              :items="items"
+              class="w-full justify-center"
+            />
+          </UContainer>
         </div>
-        <div class="hidden lg:block right">
-          <UAvatar
-            src="https://avatars.githubusercontent.com/u/140258231?s=400&u=fb27d8779ed74ac3d21855706638fcb9311660f0&v=4"
+        <div class="right flex items-center">
+          <UColorModeButton
             size="xl"
+            color="primary"
+            variant="soft"
           />
         </div>
       </UContainer>
