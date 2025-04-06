@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <div /> wdwd
+  <div>
+	  <IndexPrimaryHeader/>
+  </div>
 </template>
