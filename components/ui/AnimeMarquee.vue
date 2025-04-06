@@ -29,13 +29,16 @@ const newAnimes = newData?.value?.data.animes
           :key="index"
           class="w-full h-full rounded-lg overflow-hidden"
         >
-			<UTooltip :delay-duration="0" text="Open on GitHub">
-				  <LazyNuxtImg
-					:alt="datum.name"
-					:src="datum.poster.preview2xUrl"
-					class="pointer-events-none select-none w-full h-full"
-				  />
-			</UTooltip>
+          <UTooltip
+            :delay-duration="0"
+            text="Open on GitHub"
+          >
+            <LazyNuxtImg
+              :alt="datum.name"
+              :src="datum.poster.preview2xUrl"
+              class="pointer-events-none select-none w-full h-full"
+            />
+          </UTooltip>
         </div>
       </UPageMarquee>
     </div>
