@@ -3,9 +3,9 @@
 </script>
 
 <template>
-	<div>
-		wdwd
-	</div>
+  <div>
+    wdwd
+  </div>
 </template>
 
 <style scoped>

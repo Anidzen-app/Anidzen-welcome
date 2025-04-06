@@ -4,6 +4,6 @@
 
 <template>
   <div>
-	  <IndexPrimaryHeader/>
+    <IndexPrimaryHeader />
   </div>
 </template>
