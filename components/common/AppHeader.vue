@@ -61,7 +61,6 @@ const items = ref<NavigationMenuItem[]>([
     label: 'Components',
     icon: 'i-lucide-box',
     to: '/components',
-    active: true,
     children: [
       {
         label: 'Link',
@@ -123,10 +122,12 @@ const items = ref<NavigationMenuItem[]>([
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)] px-0">
         <div class="center flex items-center w-full px-4 md:px-10 justify-center">
-          <UNavigationMenu
-            :items="items"
-            class="w-full justify-center"
-          />
+          <UContainer>
+			  <UNavigationMenu
+				  :items="items"
+				  class="w-full justify-center"
+			  />
+		  </UContainer>
         </div>
       </UContainer>
     </header>
