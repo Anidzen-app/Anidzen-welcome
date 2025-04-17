@@ -20,7 +20,7 @@
 		"@nuxt/ui-pro": "3.0.1",
 		"nuxt": "^3.16.1",
 		"nuxt-ui-pro-plugin": "file:ui-pro-plugin",
-		"zod": "^3.24.2"
+		"zod": "^3.24.3"
 	},
 	"devDependencies": {
 		"@nuxt/eslint": "^1.2.0",
