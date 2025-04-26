@@ -56,7 +56,7 @@ const items = ref<NavigationMenuItem[]>([
 <template>
   <div>
     <header
-      class="header py-3 md:bg-(--ui-bg)/25 md:backdrop-blur md:border-b md:border-(--ui-border) h-(--ui-header-height) w-full fixed md:fixed top-0 z-50"
+      class="header py-3 md:bg-(--ui-bg)/25 md:backdrop-blur md:border-b md:border-(--ui-border) w-full fixed md:fixed top-0 z-50"
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)] px-0">
         <div class="flex items-center">
