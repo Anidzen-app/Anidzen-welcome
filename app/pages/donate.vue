@@ -3,7 +3,7 @@
 </script>
 
 <template>
-wd
+  wd
 </template>
 
 <style scoped>

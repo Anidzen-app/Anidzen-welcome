@@ -13,7 +13,7 @@ const items = ref<NavigationMenuItem[]>([
     children: [
       {
         label: 'Anidzen — Аниме-платформа',
-        icon: 'i-lucide-tv',
+        icon: 'i-lucide-film',
         description: 'Погрузись в мир аниме — все что нужно, в одном месте!',
         to: 'https://watch.anidzen.com',
         disabled: true
@@ -26,18 +26,24 @@ const items = ref<NavigationMenuItem[]>([
       },
       {
         label: 'Ota-ku — Твой Личный Портал в Мир Аниме',
-        icon: 'i-lucide-tv',
+        icon: 'i-lucide-clapperboard',
         description: 'Лучшие аниме онлайн бесплатно с русской озвучкой. Погружайся в мир аниме на ota-ku.am — твой портал для просмотра аниме без границ!',
         to: 'https://ota-ku.am'
-      }
+      },
+		{
+			label: 'Aira — Календарь выхода аниме эпизодов',
+			icon: 'i-lucide-calendar-days',
+			description: 'Следите за выходом новых серий любимых аниме через удобный календарь и расширение Chrome — всё для вашего удобства!',
+			to: 'https://aira.anidzen.com'
+		}
     ]
   },
-  {
-    label: 'О нас',
-    icon: 'i-lucide-user',
-    to: '/',
-    active: false
-  },
+  // {
+  //   label: 'О нас',
+  //   icon: 'i-lucide-user',
+  //   to: '/',
+  //   active: false
+  // },
   {
     label: 'GitHub',
     icon: 'i-simple-icons-github',
@@ -56,25 +62,26 @@ const items = ref<NavigationMenuItem[]>([
 <template>
   <div>
     <header
-      class="header py-3 md:bg-(--ui-bg)/25 md:backdrop-blur md:border-b md:border-(--ui-border) w-full fixed md:fixed top-0 z-50"
+      class="header py-3 px-4 sm:px-0 md:bg-(--ui-bg)/25 md:backdrop-blur md:border-b md:border-(--ui-border) w-full fixed md:fixed top-0 z-50"
     >
       <UContainer class="flex justify-between max-w-[var(--container-8xl)] px-0">
         <div class="flex items-center">
-          <div class="flex items-center justify-between gap-2">
+          <div class=" flex items-center justify-between gap-2">
             <UColorModeImage
               light="/anidzen-light.svg"
               dark="/anidzen-dark.svg"
               :width="50"
               :height="50"
+              class="min-w-[50px] min-h-[50px]"
             />
             <h2
-              class="text-3xl font-bold"
+              class="text-3xl font-bold hidden sm:block"
             >
               <span class="text-(--ui-primary)">Ani</span>dzen
             </h2>
           </div>
         </div>
-        <div class="center flex items-center w-full px-4 md:px-10 justify-center">
+        <div class="center hidden lg:flex items-center w-full px-4 md:px-10 justify-center">
           <UContainer>
             <UNavigationMenu
               variant="link"
