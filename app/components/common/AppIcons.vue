@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="hidden">
     <UIcon name="i-lucide-film" />
     <UIcon name="i-lucide-cloud-sun" />
     <UIcon name="i-lucide-clapperboard" />
