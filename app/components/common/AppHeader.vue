@@ -30,12 +30,12 @@ const items = ref<NavigationMenuItem[]>([
         description: 'Лучшие аниме онлайн бесплатно с русской озвучкой. Погружайся в мир аниме на ota-ku.am — твой портал для просмотра аниме без границ!',
         to: 'https://ota-ku.am'
       },
-		{
-			label: 'Aira — Календарь выхода аниме эпизодов',
-			icon: 'i-lucide-calendar-days',
-			description: 'Следите за выходом новых серий любимых аниме через удобный календарь и расширение Chrome — всё для вашего удобства!',
-			to: 'https://aira.anidzen.com'
-		}
+      {
+        label: 'Aira — Календарь выхода аниме эпизодов',
+        icon: 'i-lucide-calendar-days',
+        description: 'Следите за выходом новых серий любимых аниме через удобный календарь и расширение Chrome — всё для вашего удобства!',
+        to: 'https://aira.anidzen.com'
+      }
     ]
   },
   // {
