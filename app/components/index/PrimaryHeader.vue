@@ -4,7 +4,7 @@ const features = ref([
     title: 'Всё в одном месте',
     description: 'Аниме, манга, арты, новости, фан-контент — всё, что ты любишь, собрано в AniDzen. Больше не нужно искать по всему интернету — просто заходи.',
     icon: 'i-lucide-globe',
-    to: 'https://sora.anidzen.com'
+    to: ''
   },
   {
     title: 'Открытый API',
@@ -42,7 +42,7 @@ const links = ref([
 
 <template>
   <div>
-    <div class="top-0 left-0 absolute w-full h-dvh bg-linear-to-r from-(--ui-bg) from-50%">
+    <div class="top-0 left-0 absolute w-full h-dvh bg-linear-to-r from-(--ui-bg) from-55%">
       <div class="h-dvh flex items-center">
         <UContainer class="max-w-8xl">
           <div class="h-full w-full">

@@ -15,8 +15,7 @@ const items = ref<NavigationMenuItem[]>([
         label: 'Anidzen — Аниме-платформа',
         icon: 'i-lucide-film',
         description: 'Погрузись в мир аниме — все что нужно, в одном месте!',
-        to: 'https://watch.anidzen.com',
-        disabled: true
+        to: 'https://watch.anidzen.com'
       },
       {
         label: 'Sora Graph-ql API',
