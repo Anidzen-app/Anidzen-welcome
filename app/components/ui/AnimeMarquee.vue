@@ -19,8 +19,8 @@ const newAnimes = newData?.value?.data.animes
 </script>
 
 <template>
-  <div class="flex flex-col h-dvh gap-4">
-    <div class="h-full">
+  <div class="flex flex-col min-h-lvh h-lvh max-h-lvh gap-4">
+    <div class="h-[33.3%]">
       <UPageMarquee
         :ui="{ root: '[--gap:--spacing(4)] h-full', content: 'w-full py-0 h-full justify-center flex-1' }"
       >
@@ -37,7 +37,7 @@ const newAnimes = newData?.value?.data.animes
         </div>
       </UPageMarquee>
     </div>
-    <div class="h-full">
+    <div class="h-[33.3%]">
       <UPageMarquee
         reverse
         :ui="{ root: '[--gap:--spacing(4)] h-full', content: 'w-full py-0 h-full justify-center flex-1' }"
@@ -56,7 +56,7 @@ const newAnimes = newData?.value?.data.animes
       </UPageMarquee>
     </div>
 
-    <div class="h-full">
+    <div class="h-[33.3%]">
       <UPageMarquee
         :ui="{ root: '[--gap:--spacing(4)] h-full', content: 'w-full py-0 h-full justify-center flex-1' }"
       >
