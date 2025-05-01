@@ -24,7 +24,7 @@
 	},
 	"devDependencies": {
 		"@nuxt/eslint": "^1.2.0",
-		"@nuxtjs/i18n": "^9.5.2",
+		"@nuxtjs/i18n": "^9.5.4",
 		"@types/node": "^22.15.2",
 		"eslint": "^9.22.0",
 		"nuxt-swiper": "^2.0.0",
